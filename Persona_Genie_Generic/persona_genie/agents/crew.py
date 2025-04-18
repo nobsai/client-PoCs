@@ -1,5 +1,6 @@
 from crewai import Agent, Task, Crew
 from langchain.tools import tool
+from langchain_openai import ChatOpenAI
 import os
 import sys
 
@@ -17,6 +18,14 @@ class CustomerProfilerCrew:
         self.verbose = verbose
         self.api_key = api_key
         
+        # Configure LLM to use the API key
+        if api_key:
+            self.llm = ChatOpenAI(
+                model="gpt-3.5-turbo",
+                temperature=0.7,
+                openai_api_key=api_key
+            )
+        
     def create_style_analyst(self):
         """Create the Style Analyst agent"""
         return Agent(
@@ -29,7 +38,8 @@ class CustomerProfilerCrew:
             verbose=self.verbose,
             allow_delegation=False,
             max_rpm=20,  # Optimize API usage
-            openai_api_key=self.api_key
+            openai_api_key=self.api_key,
+            llm=self.llm if hasattr(self, 'llm') else None
         )
         
     def create_persona_writer(self):
@@ -44,7 +54,8 @@ class CustomerProfilerCrew:
             verbose=self.verbose,
             allow_delegation=False,
             max_rpm=20,  # Optimize API usage
-            openai_api_key=self.api_key
+            openai_api_key=self.api_key,
+            llm=self.llm if hasattr(self, 'llm') else None
         )
         
     def create_archetype_classifier(self):
@@ -59,7 +70,8 @@ class CustomerProfilerCrew:
             verbose=self.verbose,
             allow_delegation=False,
             max_rpm=20,  # Optimize API usage
-            openai_api_key=self.api_key
+            openai_api_key=self.api_key,
+            llm=self.llm if hasattr(self, 'llm') else None
         )
     
     def analyze_style_preferences(self, customer_orders):
@@ -193,7 +205,8 @@ class CustomerProfilerCrew:
             tasks=[style_analysis_task, lifestyle_analysis_task, archetype_task, persona_task],
             verbose=self.verbose,
             process="sequential",  # Process tasks sequentially for reliability
-            openai_api_key=self.api_key
+            openai_api_key=self.api_key,
+            llm=self.llm if hasattr(self, 'llm') else None
         )
         
         try:
