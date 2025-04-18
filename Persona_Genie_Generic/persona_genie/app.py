@@ -274,6 +274,9 @@ def generate_profile_with_timeout(profiler, customer_id, orders, timeout=None):
             result = profiler.get_customer_profile(customer_id, orders)
         except Exception as e:
             error = str(e)
+            # Check specifically for OpenAI API key errors
+            if "openai_api_key" in str(e).lower() or "api key" in str(e).lower():
+                error = f"OpenAI API key error: {e}"
     
     # Start thread
     thread = threading.Thread(target=target)
@@ -288,6 +291,9 @@ def generate_profile_with_timeout(profiler, customer_id, orders, timeout=None):
         return None, f"Timeout generating profile for {customer_id} after {timeout} seconds"
     
     if error:
+        # If it's an API key error, provide more helpful message
+        if "api key" in error.lower():
+            return None, f"API key error when generating profile for {customer_id}. Please check your OpenAI API key."
         return None, f"Error generating profile for {customer_id}: {error}"
     
     return result, None
@@ -470,78 +476,91 @@ if st.session_state.file_uploaded or (st.session_state.data is not None):
             )
             
             if st.button("Generate Customer Profiles", key="generate_profiles_btn"):
-                # Group data by customer
-                customer_groups = group_by_customer(st.session_state.data)
-                
-                # Initialize profiler crew with API key
-                profiler = CustomerProfilerCrew(verbose=False, api_key=st.session_state.openai_api_key)
-                
-                # Set up progress tracking with enhanced styling
-                progress_container = st.container()
-                with progress_container:
-                    st.markdown("<h3>Analysis Progress</h3>", unsafe_allow_html=True)
-                    progress_bar = st.progress(0)
-                    status_text = st.empty()
-                    result_area = st.empty()
-                
-                # Function to update progress
-                def update_progress(i, total, customer_id):
-                    status_text.markdown(f"Analyzing customer **{i+1}/{total}**: `{customer_id}`")
-                    progress_bar.progress((i + 1) / total)
-                
-                # Process customers in batches
-                profiles = []
-                total_customers = len(customer_groups)
-                
-                # Get batch size from sidebar or default
-                if 'batch_size' not in locals():
-                    batch_size = 5
-                
-                # Determine number of batches
-                num_batches = (total_customers + batch_size - 1) // batch_size
-                
-                for batch_idx in range(num_batches):
-                    start_idx = batch_idx * batch_size
-                    end_idx = min(start_idx + batch_size, total_customers)
+                # Verify API key format
+                if not st.session_state.openai_api_key.startswith(('sk-', 'org-')):
+                    st.error("❌ The API key provided doesn't appear to be valid. Please check your OpenAI API key.")
+                else:
+                    # Group data by customer
+                    customer_groups = group_by_customer(st.session_state.data)
                     
-                    result_area.info(f"Processing batch {batch_idx+1}/{num_batches} (customers {start_idx+1}-{end_idx})")
+                    # Initialize profiler crew with API key
+                    profiler = CustomerProfilerCrew(verbose=False, api_key=st.session_state.openai_api_key)
                     
-                    # Process this batch
-                    batch_profiles = process_customer_batch(
-                        profiler,
-                        customer_groups,
-                        start_idx,
-                        end_idx,
-                        lambda i, t, cid: update_progress(start_idx + i, total_customers, cid)
-                    )
+                    # Set up progress tracking with enhanced styling
+                    progress_container = st.container()
+                    with progress_container:
+                        st.markdown("<h3>Analysis Progress</h3>", unsafe_allow_html=True)
+                        progress_bar = st.progress(0)
+                        status_text = st.empty()
+                        result_area = st.empty()
                     
-                    # Add to overall profiles
-                    profiles.extend(batch_profiles)
+                    # Function to update progress
+                    def update_progress(i, total, customer_id):
+                        status_text.markdown(f"Analyzing customer **{i+1}/{total}**: `{customer_id}`")
+                        progress_bar.progress((i + 1) / total)
                     
-                    # Update overall progress
-                    progress_bar.progress(end_idx / total_customers)
+                    # Process customers in batches
+                    profiles = []
+                    total_customers = len(customer_groups)
+                    api_key_error_count = 0
                     
-                    # Show interim results
-                    result_area.success(f"Batch {batch_idx+1} complete: Generated {len(batch_profiles)} profiles")
-                
-                # Clear progress indicators
-                progress_bar.empty()
-                status_text.empty()
-                
-                # Save to session state
-                st.session_state.profiles = profiles
-                
-                # Final success message with enhanced styling
-                result_area.markdown(
-                    f"""
-                    <div style="padding: 1rem; background-color: #F0FFF4; border-left: 4px solid #38A169; border-radius: 4px;">
-                        <h3 style="margin-top: 0; color: #38A169;">Analysis Complete!</h3>
-                        <p>Successfully generated <span class="gold-accent">{len(profiles)}</span> customer profiles out of {total_customers} customers.</p>
-                        <p>Switch to the <b>Customer Profiles</b> tab to view detailed personas.</p>
-                    </div>
-                    """, 
-                    unsafe_allow_html=True
-                )
+                    # Get batch size from sidebar or default
+                    if 'batch_size' not in locals():
+                        batch_size = 5
+                    
+                    # Determine number of batches
+                    num_batches = (total_customers + batch_size - 1) // batch_size
+                    
+                    for batch_idx in range(num_batches):
+                        start_idx = batch_idx * batch_size
+                        end_idx = min(start_idx + batch_size, total_customers)
+                        
+                        result_area.info(f"Processing batch {batch_idx+1}/{num_batches} (customers {start_idx+1}-{end_idx})")
+                        
+                        # Process this batch
+                        batch_profiles = process_customer_batch(
+                            profiler,
+                            customer_groups,
+                            start_idx,
+                            end_idx,
+                            lambda i, t, cid: update_progress(start_idx + i, total_customers, cid)
+                        )
+                        
+                        # Check for consistent API key errors
+                        if batch_idx == 0 and len(batch_profiles) == 0:
+                            api_key_error_msg = st.error("❌ No profiles were generated in the first batch. This is likely due to API key issues. Please check your OpenAI API key and try again.")
+                            break
+                        
+                        # Add to overall profiles
+                        profiles.extend(batch_profiles)
+                        
+                        # Update overall progress
+                        progress_bar.progress(end_idx / total_customers)
+                        
+                        # Show interim results
+                        result_area.success(f"Batch {batch_idx+1} complete: Generated {len(batch_profiles)} profiles")
+                    
+                    # Clear progress indicators
+                    progress_bar.empty()
+                    status_text.empty()
+                    
+                    # Save to session state
+                    st.session_state.profiles = profiles
+                    
+                    if not profiles:
+                        result_area.error("❌ No profiles were generated. Please check your OpenAI API key and try again.")
+                    else:
+                        # Final success message with enhanced styling
+                        result_area.markdown(
+                            f"""
+                            <div style="padding: 1rem; background-color: #F0FFF4; border-left: 4px solid #38A169; border-radius: 4px;">
+                                <h3 style="margin-top: 0; color: #38A169;">Analysis Complete!</h3>
+                                <p>Successfully generated <span class="gold-accent">{len(profiles)}</span> customer profiles out of {total_customers} customers.</p>
+                                <p>Switch to the <b>Customer Profiles</b> tab to view detailed personas.</p>
+                            </div>
+                            """, 
+                            unsafe_allow_html=True
+                        )
     
     with tab2:
         # Display profiles
