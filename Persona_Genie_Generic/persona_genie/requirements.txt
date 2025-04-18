@@ -10,3 +10,4 @@ crewai==0.28.0
 langchain==0.1.10
 langchain-openai
 python-dotenv==1.0.0 
+pysqlite3-binary
