@@ -8,5 +8,5 @@ pillow==10.2.0
 faker==22.0.0
 crewai==0.28.0
 langchain==0.1.10
-langchain-openai==0.0.2
+langchain-openai
 python-dotenv==1.0.0 
