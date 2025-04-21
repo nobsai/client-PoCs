@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etihad Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="chat-header">
+            <!-- Add logo image here -->
+            Etihad<i> ConciergeX™</i>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Chat messages and buttons will be dynamically inserted here -->
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" class="text-input" placeholder="Type or speak your message...">
+            <button id="voiceButton" class="voice-button" aria-label="Voice Input">🎤</button>
+            <button class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
