@@ -1,0 +1,15 @@
+flask
+langchain
+langchain-openai
+langchain-community
+langchain-experimental
+pydantic
+openai
+unstructured
+python-docx
+chromadb
+tokenizers
+httpx
+pandas
+docx2txt
+tabulate
