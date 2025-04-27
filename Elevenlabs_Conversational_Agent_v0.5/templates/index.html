@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etihad AI Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --etihad-gold: #bd9b60;
+            --etihad-gold-light: #d4b77c;
+            --etihad-gold-dark: #9a7c45;
+            --etihad-dark: #2c2c2c;
+            --etihad-white: #ffffff;
+            --etihad-light-gray: #f8f8f8;
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glow-color: rgba(189, 155, 96, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            color: var(--etihad-white);
+            perspective: 1000px;
+        }
+
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=');
+            opacity: 0.4;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .bg-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(189, 155, 96, 0.15) 0%, transparent 35%),
+                radial-gradient(circle at 80% 70%, rgba(189, 155, 96, 0.1) 0%, transparent 35%);
+            z-index: 0;
+        }
+
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(189, 155, 96, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(189, 155, 96, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 0;
+            opacity: 0.3;
+            transform: perspective(1000px) rotateX(60deg) scale(2.5) translateY(-20%);
+            transform-origin: center;
+            background-position: center;
+            filter: blur(0.5px);
+        }
+
+        .brand-container {
+            position: absolute;
+            top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 10;
+        }
+
+        .etihad-logo {
+            width: 200px;
+            filter: drop-shadow(0 2px 10px rgba(189, 155, 96, 0.3));
+        }
+
+        .tag-line {
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            color: var(--etihad-gold-light);
+            font-weight: 400;
+            text-transform: uppercase;
+            opacity: 0.9;
+            text-shadow: 0 0 10px rgba(189, 155, 96, 0.5);
+            background: linear-gradient(to right, #bd9b60, #e5d3a8, #bd9b60);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .main-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 5;
+            transform-style: preserve-3d;
+            margin-bottom: 100px;
+        }
+
+        .avatar-container {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: rgba(20, 20, 20, 0.5);
+            backdrop-filter: blur(10px);
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(189, 155, 96, 0.1),
+                inset 0 0 30px rgba(189, 155, 96, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform: translateZ(50px);
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+
+        .avatar-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            padding: 2px;
+            background: linear-gradient(45deg, transparent, var(--etihad-gold), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0.6;
+            transition: opacity 0.5s ease;
+        }
+
+        .active .avatar-container::before {
+            opacity: 1;
+            background: linear-gradient(45deg, transparent, var(--etihad-gold-light), var(--etihad-gold), var(--etihad-gold-light), transparent);
+            animation: border-rotate 3s linear infinite;
+        }
+
+        .pulse-rings {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            z-index: 0;
+            transform: scale(1);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .active .pulse-rings {
+            animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+            background: radial-gradient(circle, transparent 60%, var(--etihad-gold) 100%);
+            opacity: 0.2;
+        }
+
+        .avatar-inner {
+            width: 85%;
+            height: 85%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.3) 100%);
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .visualization-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+
+        .circle-visualization {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .circle-wave {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 110%;
+            height: 110%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            opacity: 0.8;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                var(--etihad-gold-light) 20%,
+                var(--etihad-gold) 40%,
+                var(--etihad-gold-light) 60%,
+                transparent 80%
+            );
+            filter: blur(10px);
+            transition: all 0.6s ease;
+        }
+
+        .etihad-symbol {
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            opacity: 0.9;
+            filter: drop-shadow(0 0 8px rgba(189, 155, 96, 0.6));
+        }
+
+        .inner-glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, var(--etihad-gold) 0%, transparent 60%);
+            opacity: 0;
+            z-index: 2;
+            filter: blur(20px);
+            transition: opacity 0.8s ease;
+        }
+
+        .active .inner-glow {
+            opacity: 0.15;
+            animation: pulse-subtle 4s infinite alternate;
+        }
+
+        .controls-area {
+            position: fixed;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 5000;
+            pointer-events: none;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            pointer-events: auto;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .action-button {
+            position: static;
+            width: 250px;
+            padding: 12px 0;
+            background: linear-gradient(90deg, var(--etihad-gold-dark), var(--etihad-gold), var(--etihad-gold-light));
+            color: var(--etihad-white);
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 2px 10px rgba(189, 155, 96, 0.5);
+        }
+
+        .action-button:hover {
+            opacity: 0.9;
+        }
+
+        .action-button:active {
+            transform: scale(0.98);
+        }
+
+        .status-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 1.5px;
+        }
+
+        .active .status-container {
+            color: var(--etihad-gold-light);
+        }
+
+        .decorative-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(189, 155, 96, 0.1);
+            z-index: -1;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+        }
+
+        .ring-1 {
+            width: 450px;
+            height: 450px;
+            transform: translateZ(-5px) rotateX(20deg) rotateY(10deg);
+        }
+
+        .ring-2 {
+            width: 550px;
+            height: 550px;
+            transform: translateZ(-15px) rotateX(15deg) rotateY(5deg);
+            border: 1px dashed rgba(189, 155, 96, 0.07);
+        }
+
+        .ring-3 {
+            width: 650px;
+            height: 650px;
+            transform: translateZ(-30px) rotateX(10deg) rotateY(0deg);
+        }
+
+        .active .ring-1 {
+            transform: translateZ(-5px) rotateX(15deg) rotateY(-5deg);
+            border-color: rgba(189, 155, 96, 0.15);
+        }
+
+        .active .ring-2 {
+            transform: translateZ(-15px) rotateX(5deg) rotateY(10deg);
+            border-color: rgba(189, 155, 96, 0.1);
+        }
+
+        .active .ring-3 {
+            transform: translateZ(-30px) rotateX(-5deg) rotateY(15deg);
+            border-color: rgba(189, 155, 96, 0.12);
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .loading-indicator {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--etihad-gold);
+            display: inline-block;
+            opacity: 0;
+        }
+
+        .active .loading-indicator {
+            opacity: 1;
+            animation: blink 1.5s infinite;
+        }
+
+        .constellation {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        .data-flow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 1s ease;
+            pointer-events: none;
+        }
+
+        .active .data-flow-container {
+            opacity: 1;
+        }
+
+        .data-beam {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, rgba(189, 155, 96, 0.2), transparent);
+            height: 1px;
+            width: 100px;
+            transform-origin: left center;
+            opacity: 0;
+        }
+
+        .data-particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: var(--etihad-gold-light);
+            border-radius: 50%;
+            filter: blur(1px);
+            opacity: 0;
+        }
+
+        .version-info {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            font-size: 0.7rem;
+            opacity: 0.5;
+            color: var(--etihad-gold-light);
+            letter-spacing: 1px;
+        }
+
+        @keyframes border-rotate {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulse-subtle {
+            0% { opacity: 0.1; }
+            100% { opacity: 0.25; }
+        }
+
+        @keyframes rotate-waves {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+
+        .wave-animation {
+            animation: rotate-waves 12s linear infinite;
+        }
+
+        .active .wave-animation {
+            animation-duration: 8s;
+        }
+
+        @media (max-width: 768px) {
+            .avatar-container {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .ring-1 {
+                width: 350px;
+                height: 350px;
+            }
+            
+            .ring-2 {
+                width: 420px;
+                height: 420px;
+            }
+            
+            .ring-3 {
+                width: 490px;
+                height: 490px;
+            }
+            
+            .etihad-logo {
+                width: 150px;
+            }
+            
+            .button-container {
+                margin-top: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="bg-pattern"></div>
+    <div class="grid-pattern"></div>
+    
+    <div class="brand-container">
+        <div class="tag-line">Etihad Airways | AI Concierge</div>
+    </div>
+    
+    <div class="main-container" id="mainContainer">
+        <div class="decorative-ring ring-1"></div>
+        <div class="decorative-ring ring-2"></div>
+        <div class="decorative-ring ring-3"></div>
+        
+        <div class="data-flow-container" id="dataFlowContainer"></div>
+        
+        <div class="avatar-container">
+            <div class="pulse-rings"></div>
+            <div class="avatar-inner">
+                <div class="inner-glow"></div>
+                <div class="visualization-container">
+                    <div class="circle-visualization">
+                        <div class="circle-wave wave-animation"></div>
+                        <svg class="etihad-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+                            <path fill="#BD9B60" d="M60 15c-24.85 0-45 20.15-45 45s20.15 45 45 45 45-20.15 45-45-20.15-45-45-45zm0 80c-19.33 0-35-15.67-35-35s15.67-35 35-35 35 15.67 35 35-15.67 35-35 35z"/>
+                            <path fill="#BD9B60" d="M60 40c-11.05 0-20 8.95-20 20s8.95 20 20 20 20-8.95 20-20-8.95-20-20-20zm0 30c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="controls-area">
+        <div class="button-container">
+            <button class="action-button" id="toggleButton">Experience Etihad AI</button>
+            <div class="status-container">
+                <span class="loading-indicator"></span>
+                <span class="status-text">Ready</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="version-info">POWERED BY G10X</div>
+
+    <canvas id="constellation" class="constellation"></canvas>
+
+    <script>
+        const button = document.getElementById('toggleButton');
+        const mainContainer = document.getElementById('mainContainer');
+        const buttonContainer = document.querySelector('.button-container');
+        const statusText = document.querySelector('.status-text');
+        const circleWave = document.querySelector('.circle-wave');
+        const dataFlowContainer = document.getElementById('dataFlowContainer');
+        let isActive = false;
+        let mouseMoveListener = null;
+
+        document.addEventListener('mousemove', function(e) {
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 35;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 35;
+            
+            mainContainer.style.transform = `rotateY(${xAxis}deg) rotateX(${-yAxis}deg)`;
+        });
+
+        button.onclick = function() {
+            console.log('Button clicked');
+            toggleConversation();
+        };
+        
+        function toggleConversation() {
+            if (isActive) {
+                endConversation();
+            } else {
+                startConversation();
+            }
+        }
+
+        function startConversation() {
+            console.log('Starting conversation...');
+            button.disabled = true;
+            
+            fetch('/start_conversation', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Start conversation status:', data.status);
+                    isActive = true;
+                    updateUI();
+                    createDataFlowEffects();
+                })
+                .catch(error => {
+                    console.error('Error starting conversation:', error);
+                    statusText.textContent = 'Connection Error';
+                })
+                .finally(() => {
+                    button.disabled = false;
+                });
+        }
+
+        function endConversation() {
+            console.log('Ending conversation...');
+            button.disabled = true;
+            
+            fetch('/end_conversation', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('End conversation status:', data.status);
+                    isActive = false;
+                    updateUI();
+                    clearDataFlowEffects();
+                })
+                .catch(error => {
+                    console.error('Error ending conversation:', error);
+                    statusText.textContent = 'Connection Error';
+                })
+                .finally(() => {
+                    button.disabled = false;
+                });
+        }
+
+        function updateUI() {
+            console.log('Updating UI, isActive:', isActive);
+            mainContainer.classList.toggle('active', isActive);
+            buttonContainer.classList.toggle('active', isActive);
+            
+            button.textContent = isActive ? 'End Conversation' : 'Experience Etihad AI';
+            statusText.textContent = isActive ? 'Conversation Active' : 'Ready';
+            
+            if (isActive) {
+                simulateWaveActivity();
+                enhanceAvatarInteractivity();
+            } else {
+                cancelWaveActivity();
+                removeAvatarInteractivity();
+            }
+        }
+        
+        let waveInterval;
+        
+        function simulateWaveActivity() {
+            cancelWaveActivity();
+            
+            waveInterval = setInterval(() => {
+                const intensity = Math.random() * 30 + 30;
+                const rotation = Math.random() * 360;
+                
+                circleWave.style.background = `conic-gradient(
+                    from ${rotation}deg,
+                    transparent,
+                    var(--etihad-gold-light) ${intensity - 15}%,
+                    var(--etihad-gold) ${intensity}%,
+                    var(--etihad-gold-light) ${intensity + 15}%,
+                    transparent ${intensity + 40}%
+                )`;
+                
+                circleWave.style.filter = `blur(${Math.random() * 3 + 10}px)`;
+            }, 800);
+        }
+        
+        function cancelWaveActivity() {
+            if (waveInterval) {
+                clearInterval(waveInterval);
+                waveInterval = null;
+                
+                circleWave.style.background = `conic-gradient(
+                    from 0deg,
+                    transparent 10%,
+                    var(--etihad-gold-light) 25%,
+                    var(--etihad-gold) 40%,
+                    var(--etihad-gold-light) 55%,
+                    transparent 70%
+                )`;
+                circleWave.style.filter = 'blur(12px)';
+            }
+        }
+
+        function enhanceAvatarInteractivity() {
+            const avatarContainer = document.querySelector('.avatar-container');
+            
+            mouseMoveListener = (e) => {
+                const bounds = avatarContainer.getBoundingClientRect();
+                const centerX = bounds.left + bounds.width / 2;
+                const centerY = bounds.top + bounds.height / 2;
+                const moveX = (e.clientX - centerX) / 20;
+                const moveY = (e.clientY - centerY) / 20;
+                
+                avatarContainer.style.transform = `translateZ(50px) translateX(${moveX}px) translateY(${moveY}px)`;
+                
+                const innerGlow = document.querySelector('.inner-glow');
+                innerGlow.style.background = `radial-gradient(circle at ${50 + moveX/2}% ${50 + moveY/2}%, var(--etihad-gold) 0%, transparent 60%)`;
+            };
+            
+            document.addEventListener('mousemove', mouseMoveListener);
+        }
+        
+        function removeAvatarInteractivity() {
+            if (mouseMoveListener) {
+                document.removeEventListener('mousemove', mouseMoveListener);
+                mouseMoveListener = null;
+                document.querySelector('.avatar-container').style.transform = 'translateZ(50px)';
+            }
+        }
+
+        function createDataFlowEffects() {
+            clearDataFlowEffects();
+            
+            for (let i = 0; i < 12; i++) {
+                createDataBeam(i);
+            }
+            
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    createDataParticle();
+                }, i * 200);
+            }
+        }
+        
+        function clearDataFlowEffects() {
+            dataFlowContainer.innerHTML = '';
+        }
+        
+        function createDataBeam(index) {
+            const beam = document.createElement('div');
+            beam.className = 'data-beam';
+            const angle = (index / 12) * 360;
+            const length = 150 + Math.random() * 150;
+            
+            beam.style.cssText = `
+                top: 50%;
+                left: 50%;
+                width: ${length}px;
+                transform: translate(-50%, -50%) rotate(${angle}deg);
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            `;
+            
+            dataFlowContainer.appendChild(beam);
+            
+            setTimeout(() => {
+                beam.style.opacity = '0.2';
+            }, index * 100);
+            
+            setInterval(() => {
+                if (isActive) {
+                    const particle = document.createElement('div');
+                    particle.className = 'data-particle';
+                    particle.style.cssText = `
+                        top: calc(50% - 1px);
+                        left: 50%;
+                        opacity: 0.7;
+                        transform: translate(-50%, -50%) rotate(${angle}deg) translateX(0);
+                        transition: transform 3s linear, opacity 0.3s ease;
+                    `;
+                    
+                    dataFlowContainer.appendChild(particle);
+                    
+                    setTimeout(() => {
+                        particle.style.transform = `translate(-50%, -50%) rotate(${angle}deg) translateX(${length}px)`;
+                    }, 10);
+                    
+                    setTimeout(() => {
+                        particle.style.opacity = '0';
+                        setTimeout(() => {
+                            particle.remove();
+                        }, 300);
+                    }, 2900);
+                }
+            }, 2000 + Math.random() * 3000);
+        }
+        
+        function createDataParticle() {
+            if (!isActive) return;
+            
+            const particle = document.createElement('div');
+            particle.className = 'data-particle';
+            
+            const size = 1 + Math.random() * 3;
+            const dist = 50 + Math.random() * 150;
+            const angle = Math.random() * Math.PI * 2;
+            const x = Math.cos(angle) * dist;
+            const y = Math.sin(angle) * dist;
+            const duration = 3 + Math.random() * 6;
+            
+            particle.style.cssText = `
+                top: calc(50% + ${y}px);
+                left: calc(50% + ${x}px);
+                width: ${size}px;
+                height: ${size}px;
+                opacity: 0;
+                transition: opacity 1s ease;
+                filter: blur(${size/2}px);
+            `;
+            
+            dataFlowContainer.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.style.opacity = '0.6';
+            }, 100);
+            
+            setTimeout(() => {
+                particle.style.opacity = '0';
+                setTimeout(() => {
+                    particle.remove();
+                    if (isActive) createDataParticle();
+                }, 1000);
+            }, duration * 1000);
+        }
+
+        const canvas = document.getElementById('constellation');
+        const ctx = canvas.getContext('2d');
+        let stars = [];
+        let connections = [];
+        let animationFrame;
+
+        function setupConstellation() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            stars = [];
+            for (let i = 0; i < 180; i++) {
+                stars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 1.8 + 0.8,
+                    vx: Math.random() * 0.08 - 0.04,
+                    vy: Math.random() * 0.08 - 0.04,
+                    opacity: Math.random() * 0.6 + 0.4,
+                    pulse: Math.random() * 0.1 + 0.95,
+                    pulseSpeed: Math.random() * 0.01 + 0.005,
+                    pulseDirection: Math.random() > 0.5 ? 1 : -1
+                });
+            }
+            
+            connections = [];
+            for (let i = 0; i < stars.length; i++) {
+                for (let j = i + 1; j < stars.length; j++) {
+                    const dx = stars[i].x - stars[j].x;
+                    const dy = stars[i].y - stars[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 180) {
+                        connections.push({
+                            start: i,
+                            end: j,
+                            opacity: 0.08 * (1 - distance / 180)
+                        });
+                    }
+                }
+            }
+            
+            animateConstellation();
+        }
+
+        function animateConstellation() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            for (let i = 0; i < stars.length; i++) {
+                const star = stars[i];
+                star.x += star.vx;
+                star.y += star.vy;
+                
+                // Pulse effect
+                star.pulse += star.pulseSpeed * star.pulseDirection;
+                if (star.pulse > 1.1 || star.pulse < 0.9) {
+                    star.pulseDirection *= -1;
+                }
+                
+                const currentRadius = star.radius * star.pulse;
+                
+                if (star.x < 0 || star.x > canvas.width) star.vx = -star.vx;
+                if (star.y < 0 || star.y > canvas.height) star.vy = -star.vy;
+                
+                // Draw glow effect
+                const gradient = ctx.createRadialGradient(
+                    star.x, star.y, 0,
+                    star.x, star.y, currentRadius * 4
+                );
+                gradient.addColorStop(0, `rgba(189, 155, 96, ${star.opacity * 0.5})`);
+                gradient.addColorStop(1, 'rgba(189, 155, 96, 0)');
+                
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, currentRadius * 4, 0, Math.PI * 2);
+                ctx.fillStyle = gradient;
+                ctx.fill();
+                
+                // Draw star
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, currentRadius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(245, 222, 179, ${star.opacity})`;
+                ctx.fill();
+            }
+            
+            for (let i = 0; i < connections.length; i++) {
+                const connection = connections[i];
+                const start = stars[connection.start];
+                const end = stars[connection.end];
+                
+                const dx = start.x - end.x;
+                const dy = start.y - end.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < 180) {
+                    ctx.beginPath();
+                    ctx.moveTo(start.x, start.y);
+                    ctx.lineTo(end.x, end.y);
+                    ctx.strokeStyle = `rgba(189, 155, 96, ${connection.opacity * (1 - distance / 180)})`;
+                    ctx.lineWidth = 0.8;
+                    ctx.stroke();
+                }
+            }
+            
+            animationFrame = requestAnimationFrame(animateConstellation);
+        }
+
+        window.addEventListener('resize', () => {
+            cancelAnimationFrame(animationFrame);
+            setupConstellation();
+        });
+
+        setupConstellation();
+    </script>
+</body>
+</html>
