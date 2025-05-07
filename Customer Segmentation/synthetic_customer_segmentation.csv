@@ -1,0 +1,501 @@
+Customer_ID,Age,Gender,Annual_Income,Total_Spent,Num_Purchases,Avg_Purchase_Value,Preferred_Style,Preferred_Color,Loyalty_Program_Member,Preferred_Shopping_Day,Online_vs_InStore,Coupon_Usage_Frequency,Time_Since_Last_Purchase_Days,Last_Purchase_Category,Loyalty_Points_Accumulated,Store_Visits_Per_Month,Customer_Since
+CUST0000,18,Male,29012,1127.09,41,27.49,Casual,Blue,0,Friday,InStore,Always,12,Beauty,864,1,2021-03-23
+CUST0001,19,Other,27164,1521.39,39,39.01,Casual,Green,0,Friday,InStore,Often,90,Beauty,859,4,2022-10-06
+CUST0002,60,Male,39115,519.6,10,51.96,Vintage,Yellow,1,Sunday,Online,Rarely,44,Clothing,1619,7,2025-01-28
+CUST0003,23,Female,31270,2781.39,87,31.97,Casual,Red,1,Friday,InStore,Always,49,Clothing,9144,5,2020-06-03
+CUST0004,36,Other,88918,3930.4,34,115.6,Bohemian,Red,0,Saturday,InStore,Often,11,Accessories,1774,2,2020-12-17
+CUST0005,55,Female,44857,3155.88,91,34.68,Vintage,Blue,1,Sunday,Online,Often,90,Home Decor,1269,10,2024-11-06
+CUST0006,34,Female,48021,1552.2,30,51.74,Formal,White,1,Monday,InStore,Sometimes,72,Accessories,5413,1,2025-04-16
+CUST0007,26,Female,50336,4635.39,61,75.99,Formal,Red,0,Monday,InStore,Sometimes,41,Accessories,1342,8,2023-09-09
+CUST0008,65,Female,45035,1344.84,28,48.03,Vintage,Blue,0,Sunday,InStore,Sometimes,75,Electronics,1838,10,2022-11-14
+CUST0009,56,Other,37186,1383.48,27,51.24,Vintage,White,0,Sunday,InStore,Often,20,Home Decor,327,7,2025-02-21
+CUST0010,27,Other,82608,5919.48,58,102.06,Bohemian,White,1,Saturday,InStore,Often,2,Home Decor,1976,9,2023-06-21
+CUST0011,48,Male,81003,7838.17,53,147.89,Sporty,Black,1,Wednesday,Online,Never,34,Beauty,3027,9,2023-11-23
+CUST0012,22,Male,36635,3188.55,87,36.65,Casual,Blue,1,Friday,InStore,Sometimes,68,Clothing,9913,6,2024-11-28
+CUST0013,51,Female,33665,2036.72,56,36.37,Vintage,Blue,0,Sunday,Online,Sometimes,11,Clothing,1498,8,2022-11-03
+CUST0014,20,Female,24207,2222.16,94,23.64,Casual,Green,0,Friday,Online,Often,55,Accessories,1902,9,2020-06-22
+CUST0015,30,Other,53074,5272.5,95,55.5,Formal,Black,1,Monday,InStore,Sometimes,32,Accessories,1149,6,2021-03-10
+CUST0016,21,Male,39282,991.04,38,26.08,Casual,Red,0,Friday,Online,Always,43,Clothing,1052,4,2020-06-21
+CUST0017,46,Other,75906,4319.01,37,116.73,Sporty,Blue,1,Wednesday,Online,Sometimes,53,Accessories,1645,2,2022-01-08
+CUST0018,56,Female,43879,2663.52,62,42.96,Vintage,Yellow,0,Sunday,InStore,Always,13,Clothing,824,6,2023-08-10
+CUST0019,21,Other,26278,877.88,34,25.82,Casual,White,0,Friday,Online,Rarely,32,Clothing,907,9,2023-01-26
+CUST0020,18,Male,37713,354.64,11,32.24,Casual,Blue,0,Friday,Online,Sometimes,52,Clothing,337,7,2021-09-15
+CUST0021,24,Female,28690,1549.72,68,22.79,Casual,White,1,Friday,Online,Rarely,8,Beauty,8983,1,2023-03-04
+CUST0022,36,Female,61643,8437.8,84,100.45,Sporty,Green,0,Wednesday,Online,Sometimes,24,Clothing,1218,2,2021-12-09
+CUST0023,32,Male,43928,5001.18,82,60.99,Formal,Green,0,Monday,InStore,Sometimes,75,Beauty,1070,6,2021-10-14
+CUST0024,39,Male,81945,5596.0,50,111.92,Sporty,Black,1,Wednesday,Online,Sometimes,59,Footwear,1288,1,2021-03-07
+CUST0025,60,Male,48448,1178.32,22,53.56,Vintage,Green,0,Sunday,InStore,Rarely,45,Clothing,1800,4,2022-11-24
+CUST0026,40,Other,65169,6202.68,66,93.98,Sporty,Yellow,1,Wednesday,InStore,Always,84,Beauty,228,9,2025-03-19
+CUST0027,50,Male,81737,2668.0,23,116.0,Sporty,Black,0,Wednesday,InStore,Often,20,Footwear,577,10,2022-01-25
+CUST0028,31,Other,46671,6573.69,97,67.77,Formal,Black,1,Monday,Online,Always,7,Clothing,7039,5,2022-02-13
+CUST0029,18,Other,30929,544.18,26,20.93,Casual,Black,0,Friday,InStore,Sometimes,55,Beauty,19,2,2022-10-06
+CUST0030,20,Female,37877,450.1,14,32.15,Casual,Green,0,Friday,Online,Never,47,Clothing,1840,6,2021-08-22
+CUST0031,29,Other,43368,3031.6,55,55.12,Formal,White,0,Monday,InStore,Rarely,21,Accessories,1805,7,2020-07-01
+CUST0032,20,Other,30885,1320.6,62,21.3,Casual,Yellow,0,Friday,Online,Often,14,Electronics,1786,1,2024-08-31
+CUST0033,54,Female,36539,3975.96,68,58.47,Vintage,Black,0,Sunday,Online,Sometimes,52,Footwear,570,2,2024-02-12
+CUST0034,41,Female,81020,11069.25,75,147.59,Sporty,Yellow,1,Wednesday,InStore,Rarely,34,Accessories,9612,5,2023-08-01
+CUST0035,19,Female,39548,2351.05,65,36.17,Casual,Yellow,1,Friday,Online,Always,15,Electronics,9546,4,2024-07-13
+CUST0036,36,Male,83225,6585.8,65,101.32,Sporty,Green,0,Wednesday,Online,Never,86,Footwear,1276,6,2020-10-17
+CUST0037,22,Other,36617,1075.55,49,21.95,Casual,White,1,Friday,Online,Rarely,17,Accessories,6988,7,2021-11-17
+CUST0038,35,Female,58648,3385.44,48,70.53,Formal,Green,0,Monday,Online,Rarely,75,Beauty,1340,6,2021-12-08
+CUST0039,58,Male,44488,4147.2,96,43.2,Vintage,Green,1,Sunday,InStore,Always,22,Home Decor,1489,5,2024-03-10
+CUST0040,45,Male,90291,5834.4,52,112.2,Bohemian,Blue,1,Saturday,Online,Rarely,4,Clothing,4111,8,2021-05-25
+CUST0041,27,Other,84923,9419.76,63,149.52,Bohemian,Green,0,Saturday,InStore,Sometimes,52,Accessories,302,1,2021-05-14
+CUST0042,24,Other,27170,662.08,32,20.69,Casual,Green,1,Friday,Online,Rarely,16,Electronics,2284,8,2021-10-02
+CUST0043,42,Female,89511,9546.5,50,190.93,Bohemian,Green,1,Saturday,InStore,Sometimes,21,Home Decor,7877,8,2021-11-29
+CUST0044,48,Female,68101,8928.01,91,98.11,Sporty,Green,1,Wednesday,InStore,Rarely,10,Home Decor,4781,4,2025-02-09
+CUST0045,41,Male,70476,9984.02,79,126.38,Sporty,Blue,0,Wednesday,Online,Often,28,Clothing,849,7,2024-09-16
+CUST0046,44,Male,75267,6414.66,63,101.82,Sporty,Blue,1,Wednesday,Online,Often,90,Clothing,9532,7,2025-01-28
+CUST0047,51,Female,41526,2188.8,48,45.6,Vintage,White,0,Sunday,Online,Rarely,63,Clothing,796,6,2023-05-31
+CUST0048,62,Male,35408,3201.6,69,46.4,Vintage,Green,0,Sunday,InStore,Sometimes,85,Clothing,171,7,2023-05-15
+CUST0049,33,Female,45954,888.8,16,55.55,Formal,White,1,Monday,Online,Rarely,49,Footwear,7006,5,2020-05-25
+CUST0050,25,Male,20635,3111.81,79,39.39,Casual,Black,0,Friday,InStore,Often,84,Clothing,1544,1,2021-12-23
+CUST0051,29,Male,40667,6519.25,89,73.25,Formal,Blue,0,Monday,Online,Rarely,28,Electronics,1432,5,2023-12-10
+CUST0052,38,Other,79853,12681.12,87,145.76,Sporty,Yellow,0,Wednesday,InStore,Rarely,40,Clothing,1185,1,2024-11-01
+CUST0053,45,Female,82195,8273.12,58,142.64,Sporty,Yellow,0,Wednesday,Online,Often,81,Accessories,208,5,2023-12-27
+CUST0054,28,Male,96090,13102.78,82,159.79,Bohemian,Black,1,Saturday,InStore,Never,83,Footwear,307,7,2020-12-27
+CUST0055,52,Other,44205,3228.96,56,57.66,Vintage,White,0,Sunday,Online,Often,84,Footwear,1261,9,2022-02-02
+CUST0056,58,Female,44272,2775.25,85,32.65,Vintage,Black,0,Sunday,InStore,Never,58,Accessories,1536,8,2022-09-02
+CUST0057,44,Female,91895,6936.8,58,119.6,Bohemian,Red,1,Saturday,InStore,Rarely,28,Footwear,4332,6,2020-07-03
+CUST0058,50,Female,79534,8233.83,99,83.17,Sporty,Green,0,Wednesday,InStore,Rarely,31,Home Decor,832,8,2023-06-12
+CUST0059,32,Other,92629,9277.1,70,132.53,Bohemian,Yellow,1,Saturday,Online,Never,38,Accessories,6725,4,2021-06-06
+CUST0060,46,Female,79056,6110.97,57,107.21,Sporty,Green,1,Wednesday,Online,Often,43,Footwear,7534,5,2024-08-30
+CUST0061,40,Other,67554,2474.75,25,98.99,Sporty,Blue,1,Wednesday,Online,Sometimes,89,Accessories,3238,4,2021-07-28
+CUST0062,55,Other,49319,4224.22,77,54.86,Vintage,Black,0,Sunday,InStore,Rarely,47,Accessories,619,1,2021-07-16
+CUST0063,29,Male,78988,2035.2,15,135.68,Bohemian,Green,1,Saturday,InStore,Rarely,63,Clothing,300,10,2020-10-10
+CUST0064,43,Female,75686,6578.22,66,99.67,Sporty,Blue,0,Wednesday,Online,Often,15,Clothing,820,8,2023-06-18
+CUST0065,18,Other,24971,894.65,29,30.85,Casual,Black,0,Friday,InStore,Rarely,54,Beauty,1220,10,2023-08-05
+CUST0066,34,Female,52464,3633.41,67,54.23,Formal,Black,1,Monday,Online,Sometimes,79,Home Decor,1725,4,2022-01-17
+CUST0067,30,Male,42660,2222.1,30,74.07,Formal,Blue,0,Monday,Online,Sometimes,89,Beauty,962,5,2022-02-26
+CUST0068,21,Female,29440,2149.0,100,21.49,Casual,Yellow,1,Friday,Online,Rarely,34,Home Decor,9763,4,2024-11-17
+CUST0069,52,Other,47844,2265.18,38,59.61,Vintage,Blue,1,Sunday,InStore,Never,22,Footwear,9849,10,2023-07-31
+CUST0070,43,Other,64074,9250.14,69,134.06,Sporty,Black,1,Wednesday,InStore,Sometimes,64,Electronics,1417,10,2024-04-03
+CUST0071,24,Female,30561,2085.39,87,23.97,Casual,Red,0,Friday,Online,Often,74,Beauty,1947,1,2021-10-31
+CUST0072,45,Female,61318,2572.48,32,80.39,Sporty,Green,1,Wednesday,InStore,Rarely,75,Electronics,8156,2,2022-01-04
+CUST0073,56,Female,43380,2831.92,52,54.46,Vintage,Yellow,0,Sunday,InStore,Rarely,89,Electronics,590,7,2020-09-08
+CUST0074,26,Female,84903,3584.49,21,170.69,Bohemian,Black,1,Saturday,Online,Often,66,Clothing,8989,8,2023-09-22
+CUST0075,51,Female,36146,3942.12,76,51.87,Vintage,Green,1,Sunday,InStore,Often,27,Footwear,9098,3,2023-11-17
+CUST0076,43,Female,88863,13265.01,99,133.99,Sporty,Red,0,Wednesday,InStore,Sometimes,31,Home Decor,324,5,2025-03-20
+CUST0077,25,Male,88096,6658.8,62,107.4,Bohemian,Blue,0,Saturday,Online,Rarely,20,Electronics,1910,5,2021-02-14
+CUST0078,33,Female,83614,9645.35,71,135.85,Bohemian,Blue,1,Saturday,InStore,Sometimes,77,Beauty,2336,2,2021-12-16
+CUST0079,48,Female,85886,5550.93,63,88.11,Sporty,Green,1,Wednesday,InStore,Rarely,39,Beauty,9601,8,2023-09-20
+CUST0080,33,Female,57648,5388.19,71,75.89,Formal,Black,1,Monday,Online,Rarely,25,Home Decor,4012,10,2021-03-03
+CUST0081,54,Female,43460,730.5,15,48.7,Vintage,Yellow,1,Sunday,InStore,Often,50,Home Decor,2592,8,2021-02-26
+CUST0082,20,Female,36459,2262.7,85,26.62,Casual,Red,1,Friday,Online,Always,2,Home Decor,2461,7,2025-01-01
+CUST0083,27,Female,55384,2232.13,43,51.91,Formal,Green,1,Monday,InStore,Often,87,Beauty,6326,6,2024-01-24
+CUST0084,64,Other,47728,550.62,14,39.33,Vintage,Red,0,Sunday,InStore,Always,30,Home Decor,185,7,2024-12-31
+CUST0085,19,Other,34538,821.5,31,26.5,Casual,Black,0,Friday,Online,Often,38,Footwear,767,7,2025-04-25
+CUST0086,29,Other,57405,4457.18,62,71.89,Formal,Yellow,0,Monday,Online,Never,49,Beauty,1399,4,2020-06-07
+CUST0087,65,Male,49108,1375.64,28,49.13,Vintage,White,1,Sunday,Online,Often,60,Footwear,9055,3,2020-05-08
+CUST0088,25,Female,31323,3207.9,85,37.74,Casual,Yellow,1,Friday,InStore,Sometimes,39,Accessories,6402,8,2024-09-28
+CUST0089,21,Female,32496,2443.52,83,29.44,Casual,Green,1,Friday,InStore,Rarely,85,Electronics,4597,1,2020-11-15
+CUST0090,26,Other,99839,9740.52,87,111.96,Bohemian,White,1,Saturday,InStore,Rarely,46,Accessories,3215,10,2024-03-05
+CUST0091,46,Other,84758,12213.42,94,129.93,Sporty,Blue,0,Wednesday,InStore,Sometimes,40,Electronics,68,10,2022-02-01
+CUST0092,47,Female,64306,2798.25,21,133.25,Sporty,Black,1,Wednesday,Online,Rarely,70,Footwear,8797,9,2021-11-14
+CUST0093,49,Female,65391,5010.18,42,119.29,Sporty,Black,1,Wednesday,InStore,Sometimes,10,Accessories,3796,7,2022-08-12
+CUST0094,36,Male,72959,10626.0,60,177.1,Bohemian,Black,0,Saturday,Online,Often,87,Footwear,1197,7,2024-05-11
+CUST0095,37,Female,82113,4468.23,39,114.57,Sporty,Red,1,Wednesday,InStore,Rarely,9,Home Decor,7706,5,2022-12-12
+CUST0096,52,Male,34580,685.2,15,45.68,Vintage,Black,1,Sunday,Online,Rarely,69,Accessories,6467,8,2021-05-07
+CUST0097,46,Other,84351,10883.07,99,109.93,Sporty,White,0,Wednesday,InStore,Sometimes,63,Beauty,835,5,2020-09-26
+CUST0098,23,Female,27119,1353.66,66,20.51,Casual,Blue,1,Friday,Online,Often,70,Home Decor,5976,1,2024-10-10
+CUST0099,55,Female,36219,831.0,25,33.24,Vintage,Red,0,Sunday,InStore,Sometimes,3,Clothing,1611,6,2022-06-18
+CUST0100,28,Male,58500,1833.84,36,50.94,Formal,Green,0,Monday,InStore,Often,30,Footwear,1585,3,2022-10-11
+CUST0101,25,Male,79085,4581.92,28,163.64,Bohemian,Green,1,Saturday,InStore,Never,4,Accessories,343,6,2024-09-20
+CUST0102,35,Male,50609,713.16,12,59.43,Formal,Black,0,Monday,Online,Sometimes,15,Home Decor,130,8,2023-03-01
+CUST0103,63,Other,41863,3394.5,75,45.26,Vintage,Red,1,Sunday,InStore,Always,6,Home Decor,8643,5,2021-06-18
+CUST0104,61,Female,31020,972.91,17,57.23,Vintage,White,1,Sunday,InStore,Sometimes,57,Clothing,1423,6,2022-05-09
+CUST0105,29,Female,72152,3248.18,26,124.93,Bohemian,Green,1,Saturday,Online,Sometimes,38,Electronics,8382,10,2021-01-02
+CUST0106,52,Other,33749,3934.83,93,42.31,Vintage,Green,0,Sunday,Online,Often,53,Footwear,1694,8,2025-02-16
+CUST0107,57,Female,33115,2633.5,50,52.67,Vintage,Black,1,Sunday,Online,Rarely,61,Clothing,1594,2,2025-03-27
+CUST0108,24,Male,23164,1401.06,57,24.58,Casual,Green,0,Friday,InStore,Sometimes,43,Home Decor,250,7,2021-06-30
+CUST0109,49,Other,81801,5464.96,64,85.39,Sporty,Red,1,Wednesday,InStore,Sometimes,74,Beauty,3585,3,2023-08-22
+CUST0110,54,Other,33546,2089.26,54,38.69,Vintage,Black,0,Sunday,InStore,Sometimes,55,Beauty,1995,10,2024-06-19
+CUST0111,45,Other,88243,1509.56,13,116.12,Bohemian,Yellow,1,Saturday,Online,Rarely,40,Footwear,5851,1,2020-12-17
+CUST0112,28,Female,58557,7321.66,94,77.89,Formal,Red,0,Monday,InStore,Always,12,Home Decor,1086,4,2024-07-22
+CUST0113,57,Male,44865,2874.72,53,54.24,Vintage,Black,1,Sunday,InStore,Often,73,Beauty,1491,1,2021-07-17
+CUST0114,28,Male,41630,6624.0,96,69.0,Formal,Black,1,Monday,InStore,Sometimes,57,Electronics,4575,4,2025-04-01
+CUST0115,28,Male,81310,12164.75,65,187.15,Bohemian,Black,1,Saturday,InStore,Rarely,29,Electronics,9919,1,2024-01-07
+CUST0116,21,Male,29876,1334.59,37,36.07,Casual,Black,1,Friday,Online,Never,56,Accessories,2216,7,2024-10-17
+CUST0117,32,Other,86392,9611.46,81,118.66,Bohemian,Black,0,Saturday,Online,Often,56,Clothing,941,2,2024-10-16
+CUST0118,45,Female,74066,11825.84,83,142.48,Sporty,Yellow,1,Wednesday,Online,Sometimes,42,Accessories,7638,6,2021-05-17
+CUST0119,24,Female,23468,1262.39,41,30.79,Casual,Green,1,Friday,InStore,Sometimes,40,Home Decor,5662,4,2023-10-22
+CUST0120,48,Other,65509,2593.88,19,136.52,Sporty,Yellow,0,Wednesday,InStore,Rarely,45,Footwear,1489,3,2022-10-27
+CUST0121,27,Male,44798,3228.96,42,76.88,Formal,Blue,0,Monday,InStore,Sometimes,23,Home Decor,1011,8,2020-06-24
+CUST0122,43,Other,84709,12784.6,97,131.8,Bohemian,Yellow,1,Saturday,InStore,Sometimes,20,Electronics,1218,8,2020-12-24
+CUST0123,61,Other,39922,1498.5,45,33.3,Vintage,Red,1,Sunday,InStore,Rarely,58,Clothing,1032,6,2021-12-31
+CUST0124,37,Other,81124,2015.16,21,95.96,Sporty,Green,1,Wednesday,Online,Sometimes,6,Electronics,9466,4,2022-09-23
+CUST0125,45,Male,75585,8132.6,74,109.9,Sporty,Red,1,Wednesday,Online,Always,44,Home Decor,1481,9,2025-04-23
+CUST0126,26,Female,48118,7454.0,100,74.54,Formal,White,0,Monday,Online,Always,50,Electronics,1586,6,2021-02-22
+CUST0127,26,Other,95861,16746.3,90,186.07,Bohemian,Black,0,Saturday,Online,Sometimes,50,Footwear,516,10,2023-12-30
+CUST0128,31,Other,42670,4217.64,84,50.21,Formal,Blue,1,Monday,Online,Sometimes,85,Electronics,2212,10,2025-04-14
+CUST0129,22,Other,38314,1752.18,58,30.21,Casual,Black,0,Friday,InStore,Often,88,Beauty,191,7,2020-05-09
+CUST0130,36,Female,70597,7937.44,56,141.74,Bohemian,Blue,0,Saturday,Online,Often,25,Accessories,281,3,2025-01-06
+CUST0131,22,Other,23314,1808.56,74,24.44,Casual,Yellow,0,Friday,InStore,Often,80,Accessories,1223,7,2021-06-22
+CUST0132,28,Other,45925,5252.8,98,53.6,Formal,Blue,1,Monday,Online,Sometimes,31,Electronics,4768,8,2020-06-26
+CUST0133,34,Female,47837,2946.37,49,60.13,Formal,Blue,1,Monday,InStore,Sometimes,57,Electronics,4716,7,2020-05-17
+CUST0134,41,Male,83718,5828.7,30,194.29,Bohemian,Green,0,Saturday,InStore,Never,62,Footwear,1135,2,2024-11-23
+CUST0135,28,Male,79340,2646.4,20,132.32,Bohemian,Black,1,Saturday,InStore,Rarely,56,Clothing,3737,8,2023-05-14
+CUST0136,50,Male,60873,7328.16,63,116.32,Sporty,White,1,Wednesday,Online,Always,48,Accessories,561,6,2024-06-23
+CUST0137,23,Male,24785,919.62,27,34.06,Casual,Black,1,Friday,InStore,Rarely,61,Electronics,186,2,2024-02-14
+CUST0138,22,Other,27066,790.83,29,27.27,Casual,Yellow,1,Friday,Online,Rarely,39,Clothing,882,4,2025-03-12
+CUST0139,61,Male,44978,1064.7,18,59.15,Vintage,White,0,Sunday,InStore,Sometimes,19,Footwear,879,1,2022-02-20
+CUST0140,36,Female,77882,16287.92,83,196.24,Bohemian,Blue,0,Saturday,InStore,Sometimes,68,Beauty,1039,9,2021-05-26
+CUST0141,25,Male,82794,8762.6,70,125.18,Bohemian,Yellow,1,Saturday,InStore,Rarely,3,Footwear,1206,6,2021-01-26
+CUST0142,27,Male,59067,3375.84,52,64.92,Formal,Red,1,Monday,InStore,Often,23,Home Decor,7712,8,2023-01-03
+CUST0143,28,Male,42067,4014.04,68,59.03,Formal,Black,0,Monday,Online,Rarely,6,Footwear,1911,5,2023-05-17
+CUST0144,37,Female,96719,10149.92,79,128.48,Bohemian,Black,0,Saturday,InStore,Rarely,46,Clothing,1773,6,2021-04-18
+CUST0145,37,Female,86192,4707.06,57,82.58,Sporty,White,1,Wednesday,InStore,Sometimes,24,Electronics,8251,6,2021-12-27
+CUST0146,33,Other,96252,3219.2,20,160.96,Bohemian,White,0,Saturday,Online,Always,24,Beauty,601,6,2024-01-08
+CUST0147,19,Female,30745,2824.7,94,30.05,Casual,Black,1,Friday,InStore,Sometimes,89,Electronics,5859,8,2023-08-24
+CUST0148,23,Other,34252,946.35,45,21.03,Casual,Red,0,Friday,InStore,Sometimes,66,Home Decor,1391,3,2024-10-23
+CUST0149,20,Female,39908,2454.72,96,25.57,Casual,Red,0,Friday,Online,Often,47,Footwear,784,10,2022-07-19
+CUST0150,20,Female,34743,2175.69,57,38.17,Casual,White,0,Friday,InStore,Sometimes,51,Footwear,1330,5,2021-10-11
+CUST0151,27,Female,40849,1887.27,33,57.19,Formal,Green,1,Monday,InStore,Rarely,34,Home Decor,7411,4,2023-12-19
+CUST0152,34,Male,92740,8243.28,72,114.49,Bohemian,Red,0,Saturday,InStore,Sometimes,57,Clothing,1659,6,2022-07-28
+CUST0153,47,Other,62127,9140.8,80,114.26,Sporty,Black,1,Wednesday,InStore,Often,90,Home Decor,2952,6,2024-07-20
+CUST0154,32,Male,73976,6949.95,35,198.57,Bohemian,Blue,1,Saturday,Online,Sometimes,48,Electronics,9138,3,2020-11-26
+CUST0155,27,Female,72154,6086.29,49,124.21,Bohemian,Yellow,1,Saturday,InStore,Often,74,Clothing,2153,6,2022-09-20
+CUST0156,25,Other,35264,3243.68,97,33.44,Casual,Black,0,Friday,InStore,Often,82,Beauty,372,3,2020-07-29
+CUST0157,59,Other,31815,1321.25,25,52.85,Vintage,Blue,1,Sunday,Online,Rarely,29,Footwear,8601,5,2020-05-10
+CUST0158,22,Other,26432,2252.25,91,24.75,Casual,Black,0,Friday,InStore,Sometimes,12,Beauty,1312,3,2020-06-07
+CUST0159,43,Other,75052,5357.42,31,172.82,Bohemian,Green,1,Saturday,InStore,Sometimes,4,Clothing,844,10,2023-11-04
+CUST0160,46,Female,66907,8776.42,83,105.74,Sporty,Green,0,Wednesday,Online,Sometimes,38,Home Decor,1959,5,2022-05-19
+CUST0161,54,Female,43306,2350.56,48,48.97,Vintage,Red,0,Sunday,Online,Sometimes,60,Accessories,696,10,2022-10-24
+CUST0162,31,Female,50463,3726.54,54,69.01,Formal,Blue,1,Monday,InStore,Never,31,Electronics,2107,5,2024-05-28
+CUST0163,54,Male,34616,1013.54,22,46.07,Vintage,Black,1,Sunday,InStore,Sometimes,21,Footwear,9564,6,2020-10-15
+CUST0164,28,Female,56327,3953.25,75,52.71,Formal,White,1,Monday,Online,Never,51,Beauty,7591,4,2024-01-16
+CUST0165,35,Male,51563,1200.96,16,75.06,Formal,Black,1,Monday,InStore,Often,87,Electronics,4781,9,2021-12-31
+CUST0166,19,Female,34120,713.34,27,26.42,Casual,Yellow,1,Friday,InStore,Sometimes,52,Clothing,9443,9,2020-08-10
+CUST0167,31,Male,58128,2557.6,46,55.6,Formal,White,1,Monday,InStore,Rarely,80,Home Decor,2046,3,2024-05-06
+CUST0168,24,Other,32228,1103.46,53,20.82,Casual,Black,0,Friday,Online,Sometimes,65,Clothing,92,1,2020-09-03
+CUST0169,31,Female,55523,5147.48,76,67.73,Formal,Blue,0,Monday,Online,Sometimes,21,Electronics,1262,5,2023-03-04
+CUST0170,35,Other,86623,12582.0,75,167.76,Bohemian,White,1,Saturday,Online,Never,43,Home Decor,1895,7,2021-09-13
+CUST0171,34,Other,96108,9962.68,98,101.66,Bohemian,Red,1,Saturday,Online,Sometimes,75,Beauty,3828,1,2021-04-10
+CUST0172,40,Other,75587,11643.17,77,151.21,Bohemian,Yellow,1,Saturday,Online,Often,5,Beauty,1900,4,2024-11-07
+CUST0173,25,Male,30279,1545.39,63,24.53,Casual,White,0,Friday,Online,Often,61,Home Decor,1489,1,2021-07-25
+CUST0174,34,Female,46794,5618.16,81,69.36,Formal,Yellow,1,Monday,InStore,Rarely,23,Electronics,8834,6,2022-08-10
+CUST0175,36,Other,92146,11391.68,97,117.44,Bohemian,Yellow,1,Saturday,InStore,Rarely,32,Footwear,9243,5,2024-10-02
+CUST0176,30,Male,49470,7073.0,100,70.73,Formal,Yellow,1,Monday,Online,Sometimes,36,Footwear,2096,10,2024-04-10
+CUST0177,37,Female,99352,8320.2,60,138.67,Bohemian,Blue,1,Saturday,Online,Always,11,Footwear,7347,5,2022-05-13
+CUST0178,54,Female,36621,4531.8,78,58.1,Vintage,Green,1,Sunday,Online,Sometimes,76,Accessories,4072,1,2022-12-06
+CUST0179,32,Male,90904,4436.25,39,113.75,Bohemian,Red,1,Saturday,Online,Sometimes,88,Accessories,184,9,2023-04-22
+CUST0180,32,Other,55587,4276.33,71,60.23,Formal,Blue,1,Monday,Online,Sometimes,12,Home Decor,9506,4,2023-05-15
+CUST0181,26,Female,99924,3563.2,32,111.35,Bohemian,Blue,0,Saturday,InStore,Sometimes,64,Accessories,1918,5,2023-04-13
+CUST0182,18,Other,29777,3156.18,82,38.49,Casual,Red,1,Friday,Online,Always,70,Beauty,8192,3,2024-04-14
+CUST0183,39,Male,78940,6382.82,34,187.73,Bohemian,Black,0,Saturday,InStore,Sometimes,24,Clothing,1508,6,2022-10-22
+CUST0184,45,Male,82098,3334.04,34,98.06,Sporty,Green,1,Wednesday,InStore,Sometimes,12,Electronics,1662,3,2025-01-10
+CUST0185,33,Male,50603,2861.8,41,69.8,Formal,Black,1,Monday,Online,Often,43,Footwear,9643,10,2023-05-30
+CUST0186,22,Male,31781,3561.32,98,36.34,Casual,Red,0,Friday,Online,Rarely,88,Beauty,1890,5,2023-02-17
+CUST0187,22,Male,32043,2736.8,88,31.1,Casual,Blue,0,Friday,Online,Sometimes,78,Footwear,851,9,2023-10-05
+CUST0188,63,Male,47613,4359.55,95,45.89,Vintage,Blue,0,Sunday,InStore,Sometimes,47,Clothing,1878,10,2021-06-30
+CUST0189,18,Male,37945,1838.16,74,24.84,Casual,Green,0,Friday,Online,Often,57,Clothing,1393,4,2022-09-05
+CUST0190,40,Female,72979,8198.25,75,109.31,Bohemian,Red,1,Saturday,Online,Sometimes,73,Clothing,9255,8,2021-04-02
+CUST0191,47,Female,60713,8568.6,60,142.81,Sporty,Red,0,Wednesday,InStore,Never,45,Home Decor,130,9,2022-07-21
+CUST0192,19,Female,35468,532.14,14,38.01,Casual,White,0,Friday,InStore,Often,83,Electronics,766,7,2023-08-07
+CUST0193,64,Male,42369,2841.42,58,48.99,Vintage,Yellow,0,Sunday,InStore,Sometimes,23,Beauty,804,9,2021-10-24
+CUST0194,29,Female,40113,722.04,12,60.17,Formal,White,1,Monday,InStore,Often,32,Electronics,5771,3,2023-03-14
+CUST0195,39,Male,88678,2506.56,24,104.44,Sporty,Yellow,1,Wednesday,InStore,Always,3,Accessories,3476,2,2021-08-06
+CUST0196,18,Other,34628,2968.72,86,34.52,Casual,Yellow,0,Friday,Online,Never,57,Accessories,1105,4,2024-07-14
+CUST0197,20,Male,36511,1783.18,47,37.94,Casual,Yellow,1,Friday,InStore,Often,42,Accessories,5044,3,2022-11-17
+CUST0198,32,Female,83551,9058.08,48,188.71,Bohemian,Red,0,Saturday,InStore,Sometimes,64,Clothing,1991,6,2025-03-30
+CUST0199,63,Other,47185,2670.0,50,53.4,Vintage,White,1,Sunday,Online,Sometimes,69,Electronics,4048,4,2021-03-01
+CUST0200,49,Female,83185,3498.32,28,124.94,Sporty,Red,1,Wednesday,InStore,Sometimes,18,Electronics,4078,5,2025-03-16
+CUST0201,31,Female,42590,3518.84,67,52.52,Formal,Red,0,Monday,Online,Sometimes,78,Beauty,80,2,2025-04-24
+CUST0202,35,Female,58312,2029.45,37,54.85,Formal,Blue,1,Monday,Online,Always,28,Accessories,2022,8,2021-05-16
+CUST0203,35,Male,46701,4617.6,60,76.96,Formal,Green,1,Monday,InStore,Sometimes,69,Home Decor,5986,5,2024-02-23
+CUST0204,41,Female,76803,8938.85,73,122.45,Sporty,Red,1,Wednesday,InStore,Rarely,27,Footwear,5226,7,2020-10-09
+CUST0205,21,Female,24781,242.16,12,20.18,Casual,Green,1,Friday,Online,Rarely,30,Electronics,9435,4,2020-09-11
+CUST0206,59,Female,41061,1387.68,42,33.04,Vintage,Yellow,1,Sunday,Online,Often,46,Accessories,2393,9,2021-05-14
+CUST0207,53,Male,47764,4591.72,92,49.91,Vintage,Green,0,Sunday,InStore,Never,86,Clothing,1565,1,2023-11-24
+CUST0208,53,Other,37583,542.7,18,30.15,Vintage,Blue,0,Sunday,Online,Sometimes,8,Beauty,1306,10,2022-01-13
+CUST0209,61,Male,45986,417.84,12,34.82,Vintage,Green,1,Sunday,Online,Sometimes,36,Beauty,4797,1,2022-11-10
+CUST0210,38,Male,96416,4955.84,32,154.87,Bohemian,Red,0,Saturday,Online,Sometimes,33,Footwear,547,7,2021-10-30
+CUST0211,23,Other,33304,2301.12,68,33.84,Casual,Blue,0,Friday,Online,Often,11,Home Decor,1757,1,2020-09-01
+CUST0212,24,Other,32427,1916.32,58,33.04,Casual,White,0,Friday,InStore,Often,11,Electronics,1731,7,2024-01-25
+CUST0213,45,Other,88113,2105.4,22,95.7,Sporty,Red,0,Wednesday,Online,Often,73,Electronics,555,1,2020-11-27
+CUST0214,22,Other,37794,2807.68,82,34.24,Casual,Red,0,Friday,InStore,Rarely,27,Beauty,295,7,2023-06-09
+CUST0215,22,Male,25323,2028.68,82,24.74,Casual,Green,1,Friday,InStore,Sometimes,50,Home Decor,2392,2,2023-10-30
+CUST0216,36,Female,71759,2915.88,22,132.54,Bohemian,Blue,0,Saturday,Online,Often,77,Electronics,1984,6,2023-07-09
+CUST0217,22,Male,34763,2514.96,72,34.93,Casual,Black,1,Friday,Online,Often,85,Electronics,1504,10,2022-08-26
+CUST0218,48,Male,68075,2383.93,19,125.47,Sporty,Black,0,Wednesday,Online,Often,20,Home Decor,797,6,2021-08-21
+CUST0219,37,Female,62998,1394.5,10,139.45,Sporty,White,1,Wednesday,InStore,Never,12,Accessories,7161,8,2022-07-22
+CUST0220,42,Male,86791,10277.12,62,165.76,Bohemian,Red,0,Saturday,Online,Never,77,Footwear,1768,7,2022-01-30
+CUST0221,22,Male,33559,1850.83,59,31.37,Casual,Yellow,0,Friday,InStore,Rarely,49,Accessories,284,5,2023-07-09
+CUST0222,40,Male,76158,2423.68,28,86.56,Sporty,Blue,1,Wednesday,Online,Rarely,10,Footwear,4223,4,2024-05-21
+CUST0223,60,Male,36407,2790.04,68,41.03,Vintage,Blue,1,Sunday,Online,Sometimes,80,Electronics,5499,8,2024-11-14
+CUST0224,42,Other,86721,9166.08,93,98.56,Sporty,Blue,1,Wednesday,Online,Always,26,Electronics,5247,3,2022-01-02
+CUST0225,56,Other,39550,3657.36,98,37.32,Vintage,White,0,Sunday,Online,Rarely,51,Footwear,233,10,2023-05-18
+CUST0226,35,Other,57879,2613.27,33,79.19,Formal,Green,0,Monday,InStore,Sometimes,27,Electronics,1633,5,2020-08-17
+CUST0227,24,Other,36361,752.22,27,27.86,Casual,Black,0,Friday,Online,Rarely,55,Electronics,151,8,2020-12-05
+CUST0228,40,Other,89078,11541.2,61,189.2,Bohemian,Green,1,Saturday,InStore,Often,47,Home Decor,8896,10,2021-08-26
+CUST0229,19,Other,28134,3066.28,94,32.62,Casual,Black,0,Friday,InStore,Never,83,Home Decor,1324,7,2023-08-10
+CUST0230,48,Male,74105,3119.72,23,135.64,Sporty,Red,1,Wednesday,Online,Often,72,Beauty,9524,4,2023-10-02
+CUST0231,56,Other,42816,3110.52,69,45.08,Vintage,Green,0,Sunday,Online,Never,14,Footwear,851,2,2021-07-18
+CUST0232,20,Female,31414,1545.46,49,31.54,Casual,White,0,Friday,InStore,Sometimes,13,Electronics,1478,8,2023-12-06
+CUST0233,37,Other,69839,1717.2,15,114.48,Sporty,Red,0,Wednesday,InStore,Sometimes,87,Accessories,1904,4,2021-10-11
+CUST0234,30,Female,88084,3585.6,30,119.52,Bohemian,Green,1,Saturday,InStore,Rarely,52,Home Decor,3122,3,2024-04-01
+CUST0235,57,Male,30956,4546.96,88,51.67,Vintage,White,1,Sunday,Online,Often,27,Footwear,1125,10,2022-08-14
+CUST0236,20,Male,31986,1306.62,51,25.62,Casual,White,0,Friday,Online,Often,68,Home Decor,641,10,2020-09-16
+CUST0237,60,Male,42862,2612.05,85,30.73,Vintage,Black,1,Sunday,InStore,Sometimes,87,Home Decor,4973,10,2021-02-06
+CUST0238,27,Female,92023,4442.85,27,164.55,Bohemian,Red,0,Saturday,Online,Rarely,89,Accessories,1046,7,2022-09-13
+CUST0239,60,Female,34517,2930.73,83,35.31,Vintage,White,0,Sunday,Online,Sometimes,83,Accessories,1136,3,2023-01-11
+CUST0240,55,Female,34597,1920.93,33,58.21,Vintage,White,0,Sunday,InStore,Always,63,Accessories,399,7,2025-03-08
+CUST0241,41,Female,91399,14263.47,73,195.39,Bohemian,Yellow,1,Saturday,Online,Often,63,Accessories,1454,10,2020-08-06
+CUST0242,21,Female,29571,536.2,14,38.3,Casual,Blue,1,Friday,Online,Sometimes,64,Beauty,8469,2,2025-02-28
+CUST0243,28,Female,78778,10824.58,79,137.02,Bohemian,Green,0,Saturday,InStore,Sometimes,28,Electronics,209,4,2025-02-20
+CUST0244,49,Female,61056,5432.36,67,81.08,Sporty,Black,0,Wednesday,Online,Always,31,Accessories,1660,10,2023-05-08
+CUST0245,49,Other,83289,12758.24,88,144.98,Sporty,White,0,Wednesday,InStore,Often,27,Clothing,1167,6,2021-12-21
+CUST0246,33,Male,89557,11139.96,78,142.82,Bohemian,Black,1,Saturday,Online,Rarely,66,Home Decor,1660,3,2023-04-08
+CUST0247,65,Other,31942,2655.0,45,59.0,Vintage,Blue,0,Sunday,Online,Often,32,Home Decor,804,8,2025-02-25
+CUST0248,35,Female,48805,7101.9,90,78.91,Formal,White,1,Monday,Online,Often,12,Electronics,8547,5,2022-08-22
+CUST0249,43,Other,75992,7125.21,51,139.71,Sporty,Red,0,Wednesday,InStore,Sometimes,86,Home Decor,733,2,2023-03-15
+CUST0250,37,Male,77137,8284.16,64,129.44,Bohemian,White,1,Saturday,Online,Rarely,71,Beauty,2239,10,2022-05-03
+CUST0251,63,Male,41263,4030.35,97,41.55,Vintage,Red,0,Sunday,InStore,Often,3,Clothing,1903,3,2023-01-19
+CUST0252,58,Male,30022,3553.92,64,55.53,Vintage,Yellow,0,Sunday,InStore,Rarely,36,Clothing,1340,6,2022-03-18
+CUST0253,37,Other,72184,9707.1,95,102.18,Sporty,Blue,0,Wednesday,Online,Rarely,90,Accessories,879,2,2022-08-19
+CUST0254,18,Male,26993,1660.69,71,23.39,Casual,Blue,0,Friday,InStore,Sometimes,2,Home Decor,703,2,2025-01-14
+CUST0255,62,Male,34331,3315.7,71,46.7,Vintage,Blue,1,Sunday,Online,Often,14,Footwear,6122,5,2024-10-17
+CUST0256,32,Other,44362,7183.36,92,78.08,Formal,Blue,0,Monday,InStore,Never,84,Accessories,901,6,2021-05-14
+CUST0257,28,Other,53490,6237.44,88,70.88,Formal,White,0,Monday,Online,Never,16,Beauty,1495,7,2024-02-22
+CUST0258,42,Male,70305,3237.3,27,119.9,Sporty,Black,0,Wednesday,Online,Sometimes,78,Footwear,1595,1,2024-01-09
+CUST0259,39,Other,76965,7551.6,87,86.8,Sporty,Blue,1,Wednesday,Online,Never,31,Electronics,6422,2,2022-07-25
+CUST0260,33,Other,59461,1300.55,19,68.45,Formal,Red,1,Monday,InStore,Rarely,73,Electronics,6086,9,2020-05-12
+CUST0261,33,Other,42391,956.4,12,79.7,Formal,Red,0,Monday,Online,Never,8,Electronics,1037,5,2023-11-25
+CUST0262,38,Female,83879,11286.99,99,114.01,Bohemian,Red,0,Saturday,Online,Rarely,66,Accessories,1995,3,2023-09-10
+CUST0263,35,Other,82803,12905.55,85,151.83,Bohemian,Yellow,0,Saturday,Online,Sometimes,31,Clothing,500,2,2021-08-19
+CUST0264,52,Other,44856,4956.16,88,56.32,Vintage,Red,1,Sunday,InStore,Sometimes,23,Clothing,307,3,2022-12-16
+CUST0265,20,Other,36266,1880.28,54,34.82,Casual,Green,1,Friday,Online,Rarely,35,Home Decor,2034,1,2024-11-09
+CUST0266,48,Other,74068,5666.76,44,128.79,Sporty,Red,1,Wednesday,InStore,Sometimes,10,Electronics,7557,9,2021-04-20
+CUST0267,36,Male,76371,10591.94,82,129.17,Sporty,Black,0,Wednesday,Online,Never,74,Home Decor,1480,2,2023-03-13
+CUST0268,34,Male,40084,911.7,15,60.78,Formal,Blue,0,Monday,Online,Sometimes,20,Accessories,1907,1,2024-03-02
+CUST0269,45,Female,83741,4915.68,38,129.36,Bohemian,Blue,1,Saturday,InStore,Rarely,10,Beauty,6208,2,2020-08-29
+CUST0270,26,Other,75876,6875.72,38,180.94,Bohemian,Red,1,Saturday,Online,Sometimes,37,Footwear,5462,2,2024-05-21
+CUST0271,39,Male,70261,10317.57,57,181.01,Bohemian,Black,1,Saturday,InStore,Rarely,48,Beauty,8183,4,2024-01-05
+CUST0272,32,Female,74933,1867.1,10,186.71,Bohemian,Red,0,Saturday,InStore,Sometimes,89,Clothing,1947,6,2023-06-08
+CUST0273,24,Male,30076,879.98,23,38.26,Casual,Green,0,Friday,Online,Always,19,Home Decor,573,2,2020-07-06
+CUST0274,21,Other,37031,1874.26,62,30.23,Casual,Black,1,Friday,InStore,Never,13,Beauty,2287,7,2022-10-23
+CUST0275,18,Male,34253,2822.82,94,30.03,Casual,Blue,1,Friday,Online,Rarely,51,Home Decor,5445,6,2021-12-07
+CUST0276,55,Male,37654,1025.05,19,53.95,Vintage,Blue,0,Sunday,Online,Rarely,60,Footwear,832,2,2024-09-05
+CUST0277,36,Female,95242,5940.0,36,165.0,Bohemian,Black,1,Saturday,Online,Rarely,21,Home Decor,5084,10,2022-12-26
+CUST0278,21,Male,30741,953.12,28,34.04,Casual,Yellow,0,Friday,InStore,Sometimes,7,Home Decor,612,5,2023-04-17
+CUST0279,26,Other,53251,4949.29,67,73.87,Formal,Yellow,0,Monday,Online,Never,18,Clothing,24,1,2025-03-16
+CUST0280,28,Female,46492,4678.7,61,76.7,Formal,Yellow,0,Monday,InStore,Rarely,10,Clothing,132,4,2020-08-07
+CUST0281,63,Female,34220,842.94,21,40.14,Vintage,Red,0,Sunday,InStore,Never,74,Electronics,1682,7,2021-10-07
+CUST0282,51,Female,42541,4003.19,97,41.27,Vintage,Blue,1,Sunday,Online,Rarely,36,Electronics,2535,1,2022-11-06
+CUST0283,44,Other,90217,4485.4,41,109.4,Bohemian,Black,1,Saturday,Online,Sometimes,8,Clothing,4683,7,2022-03-08
+CUST0284,32,Other,46535,6196.2,92,67.35,Formal,Blue,0,Monday,InStore,Often,46,Electronics,1115,8,2023-09-23
+CUST0285,50,Female,78535,6106.48,74,82.52,Sporty,White,1,Wednesday,Online,Rarely,29,Clothing,4702,1,2024-07-18
+CUST0286,59,Male,41712,3693.48,84,43.97,Vintage,Blue,0,Sunday,Online,Rarely,69,Home Decor,114,4,2021-12-08
+CUST0287,37,Male,81626,4936.32,32,154.26,Bohemian,Blue,1,Saturday,InStore,Often,76,Clothing,5861,10,2020-08-03
+CUST0288,29,Female,88451,4374.1,34,128.65,Bohemian,Green,1,Saturday,Online,Never,8,Accessories,9957,4,2020-06-21
+CUST0289,25,Other,20022,1654.64,52,31.82,Casual,Blue,0,Friday,Online,Rarely,42,Clothing,44,3,2023-02-26
+CUST0290,29,Other,95374,2473.2,24,103.05,Bohemian,Black,0,Saturday,Online,Always,51,Beauty,206,6,2022-12-17
+CUST0291,41,Other,64471,2478.3,30,82.61,Sporty,White,1,Wednesday,InStore,Rarely,72,Home Decor,5946,4,2022-11-22
+CUST0292,30,Other,82398,8930.74,49,182.26,Bohemian,Yellow,1,Saturday,Online,Often,90,Beauty,6515,10,2021-10-31
+CUST0293,20,Other,39739,1360.0,50,27.2,Casual,Blue,0,Friday,InStore,Rarely,10,Accessories,710,6,2021-12-08
+CUST0294,27,Male,51001,3605.27,67,53.81,Formal,Black,0,Monday,Online,Never,33,Clothing,1475,1,2022-06-14
+CUST0295,24,Male,34359,1917.72,63,30.44,Casual,White,1,Friday,InStore,Sometimes,49,Clothing,7955,10,2021-06-27
+CUST0296,28,Male,54787,1388.9,19,73.1,Formal,Black,0,Monday,Online,Always,10,Footwear,348,7,2021-01-31
+CUST0297,27,Female,57925,1185.87,21,56.47,Formal,Green,1,Monday,InStore,Sometimes,84,Accessories,7213,3,2020-10-05
+CUST0298,19,Male,30849,1168.56,36,32.46,Casual,White,1,Friday,InStore,Rarely,13,Clothing,6537,10,2024-03-06
+CUST0299,40,Female,75032,1736.48,16,108.53,Bohemian,Red,1,Saturday,Online,Often,81,Beauty,7969,4,2025-01-01
+CUST0300,18,Other,26781,651.93,31,21.03,Casual,Black,0,Friday,Online,Rarely,51,Electronics,1001,5,2024-11-02
+CUST0301,24,Female,26058,1745.91,57,30.63,Casual,Black,0,Friday,Online,Rarely,60,Footwear,463,5,2024-12-07
+CUST0302,26,Other,74952,15251.94,99,154.06,Bohemian,Red,0,Saturday,InStore,Often,53,Beauty,465,9,2024-05-20
+CUST0303,24,Other,37123,2063.25,63,32.75,Casual,Yellow,1,Friday,InStore,Rarely,39,Clothing,6568,1,2021-08-26
+CUST0304,43,Other,99506,13118.36,76,172.61,Bohemian,Yellow,0,Saturday,Online,Often,23,Accessories,1990,4,2022-10-15
+CUST0305,28,Male,41398,5073.92,64,79.28,Formal,Yellow,1,Monday,Online,Often,19,Beauty,4325,6,2023-11-27
+CUST0306,19,Female,32717,2456.73,81,30.33,Casual,Green,1,Friday,InStore,Sometimes,2,Home Decor,9726,9,2023-03-10
+CUST0307,52,Male,43580,1151.01,29,39.69,Vintage,Green,0,Sunday,InStore,Sometimes,13,Footwear,1776,9,2020-05-05
+CUST0308,50,Female,73464,5833.38,43,135.66,Sporty,Yellow,1,Wednesday,InStore,Sometimes,23,Footwear,6702,3,2022-12-23
+CUST0309,44,Female,92308,12453.84,98,127.08,Bohemian,Red,1,Saturday,InStore,Rarely,31,Clothing,7885,5,2021-02-22
+CUST0310,36,Female,71071,5315.04,48,110.73,Sporty,Black,1,Wednesday,InStore,Often,30,Accessories,5023,8,2024-12-30
+CUST0311,40,Other,83881,5385.87,63,85.49,Sporty,Yellow,0,Wednesday,Online,Rarely,53,Home Decor,992,9,2023-03-06
+CUST0312,49,Male,61841,6132.75,75,81.77,Sporty,Red,1,Wednesday,InStore,Sometimes,68,Beauty,574,3,2025-01-11
+CUST0313,29,Male,41888,3234.08,41,78.88,Formal,White,0,Monday,InStore,Often,36,Footwear,1686,8,2021-02-04
+CUST0314,37,Other,90821,4590.0,25,183.6,Bohemian,Red,0,Saturday,Online,Sometimes,23,Electronics,1201,9,2022-04-26
+CUST0315,41,Other,65358,5534.96,43,128.72,Sporty,Yellow,0,Wednesday,Online,Sometimes,21,Beauty,1597,4,2024-08-18
+CUST0316,29,Other,46774,2739.88,44,62.27,Formal,White,0,Monday,InStore,Always,88,Clothing,970,3,2021-03-22
+CUST0317,35,Female,40277,2097.6,38,55.2,Formal,Green,1,Monday,InStore,Often,36,Electronics,6268,6,2022-10-30
+CUST0318,55,Female,37150,2393.61,69,34.69,Vintage,Yellow,1,Sunday,InStore,Never,85,Footwear,9298,10,2021-01-25
+CUST0319,34,Male,79780,12126.94,97,125.02,Bohemian,White,0,Saturday,Online,Rarely,42,Footwear,534,5,2023-12-31
+CUST0320,28,Male,56950,2659.2,40,66.48,Formal,Green,1,Monday,InStore,Often,4,Home Decor,8248,5,2020-06-25
+CUST0321,50,Female,73715,7931.22,61,130.02,Sporty,Yellow,0,Wednesday,InStore,Always,25,Footwear,1487,4,2020-08-30
+CUST0322,45,Other,95719,11621.4,70,166.02,Bohemian,Black,1,Saturday,InStore,Often,72,Accessories,4913,2,2022-05-13
+CUST0323,53,Male,38475,3110.4,81,38.4,Vintage,Yellow,1,Sunday,InStore,Rarely,29,Home Decor,5131,7,2021-11-19
+CUST0324,41,Female,68538,12334.56,84,146.84,Sporty,White,0,Wednesday,Online,Often,75,Beauty,1933,10,2023-02-11
+CUST0325,25,Male,26374,2572.24,74,34.76,Casual,Yellow,1,Friday,InStore,Sometimes,20,Accessories,3381,6,2024-11-07
+CUST0326,60,Female,44993,1305.64,28,46.63,Vintage,Yellow,0,Sunday,InStore,Sometimes,81,Accessories,641,1,2024-11-07
+CUST0327,25,Male,28962,1160.28,36,32.23,Casual,Green,0,Friday,Online,Often,12,Accessories,1258,7,2024-11-25
+CUST0328,57,Female,44058,3023.89,71,42.59,Vintage,Red,0,Sunday,InStore,Often,2,Footwear,1550,9,2024-07-09
+CUST0329,26,Other,40135,5168.7,90,57.43,Formal,Blue,0,Monday,InStore,Sometimes,17,Clothing,785,9,2020-06-23
+CUST0330,34,Male,75472,2440.8,18,135.6,Bohemian,Black,1,Saturday,Online,Sometimes,68,Footwear,7205,3,2022-09-14
+CUST0331,50,Male,76062,7317.75,55,133.05,Sporty,Blue,1,Wednesday,Online,Rarely,17,Accessories,459,10,2022-04-09
+CUST0332,30,Other,74035,5680.64,56,101.44,Bohemian,Yellow,0,Saturday,Online,Sometimes,69,Beauty,99,10,2020-09-12
+CUST0333,19,Other,20646,357.12,16,22.32,Casual,Red,1,Friday,Online,Rarely,33,Electronics,2608,4,2021-11-17
+CUST0334,22,Male,33791,1966.48,94,20.92,Casual,Yellow,1,Friday,InStore,Often,54,Clothing,8481,10,2023-09-28
+CUST0335,22,Female,23735,478.63,23,20.81,Casual,Blue,0,Friday,InStore,Often,26,Footwear,1440,7,2020-09-03
+CUST0336,38,Female,61291,11190.4,80,139.88,Sporty,Blue,1,Wednesday,Online,Never,86,Clothing,1909,10,2020-12-05
+CUST0337,53,Male,32951,3833.25,75,51.11,Vintage,Yellow,0,Sunday,InStore,Sometimes,59,Footwear,540,8,2023-08-28
+CUST0338,19,Female,25724,442.2,15,29.48,Casual,Black,1,Friday,Online,Rarely,6,Clothing,2367,3,2022-10-25
+CUST0339,41,Other,89311,5732.1,66,86.85,Sporty,Black,0,Wednesday,Online,Sometimes,15,Electronics,819,8,2021-02-22
+CUST0340,49,Female,72639,11212.18,98,114.41,Sporty,White,0,Wednesday,Online,Often,8,Accessories,212,7,2020-07-14
+CUST0341,40,Other,96288,12082.7,82,147.35,Bohemian,White,0,Saturday,InStore,Often,79,Clothing,1766,3,2022-01-28
+CUST0342,65,Female,45994,844.8,24,35.2,Vintage,White,0,Sunday,Online,Sometimes,2,Home Decor,1778,9,2020-09-10
+CUST0343,43,Female,77339,13622.05,95,143.39,Bohemian,Green,0,Saturday,Online,Often,62,Footwear,1359,7,2022-04-01
+CUST0344,34,Other,41788,681.56,11,61.96,Formal,Blue,1,Monday,InStore,Often,10,Electronics,5353,4,2021-12-06
+CUST0345,40,Male,61649,9110.14,74,123.11,Sporty,Green,1,Wednesday,Online,Rarely,59,Electronics,9488,8,2021-06-13
+CUST0346,25,Male,34649,1635.0,50,32.7,Casual,White,0,Friday,Online,Sometimes,72,Beauty,0,2,2023-04-28
+CUST0347,44,Other,90890,5017.44,48,104.53,Bohemian,Green,0,Saturday,InStore,Sometimes,44,Footwear,1690,1,2022-09-30
+CUST0348,33,Other,50878,4960.44,81,61.24,Formal,Green,1,Monday,InStore,Sometimes,58,Clothing,1696,4,2024-06-11
+CUST0349,23,Female,31637,2959.32,91,32.52,Casual,Green,1,Friday,InStore,Never,22,Electronics,2401,7,2023-10-07
+CUST0350,22,Male,26419,1022.04,34,30.06,Casual,White,0,Friday,Online,Often,44,Clothing,1550,7,2023-08-17
+CUST0351,19,Other,34762,2524.84,68,37.13,Casual,Green,0,Friday,InStore,Never,7,Beauty,1915,7,2023-12-09
+CUST0352,40,Other,86657,5307.84,32,165.87,Bohemian,Green,0,Saturday,InStore,Rarely,50,Home Decor,1229,10,2025-04-23
+CUST0353,44,Female,88881,5393.19,59,91.41,Sporty,Green,0,Wednesday,Online,Always,38,Electronics,1648,3,2023-08-15
+CUST0354,32,Other,59743,5159.88,99,52.12,Formal,Green,1,Monday,InStore,Sometimes,41,Home Decor,9169,4,2023-05-02
+CUST0355,29,Female,49521,6719.19,97,69.27,Formal,Yellow,0,Monday,InStore,Sometimes,23,Beauty,1111,6,2023-07-06
+CUST0356,23,Other,38424,1457.63,71,20.53,Casual,Green,1,Friday,InStore,Always,69,Footwear,7020,1,2022-11-08
+CUST0357,28,Male,70828,9197.64,58,158.58,Bohemian,Red,0,Saturday,Online,Often,21,Footwear,1399,5,2024-04-29
+CUST0358,26,Other,49671,2815.56,36,78.21,Formal,Red,1,Monday,InStore,Never,87,Home Decor,9305,4,2022-07-30
+CUST0359,37,Other,77785,11816.25,75,157.55,Bohemian,Black,0,Saturday,InStore,Sometimes,88,Footwear,1978,9,2024-10-21
+CUST0360,18,Other,28235,971.6,35,27.76,Casual,White,0,Friday,InStore,Often,83,Footwear,1546,10,2021-10-16
+CUST0361,44,Female,76437,5587.22,34,164.33,Bohemian,White,0,Saturday,InStore,Never,23,Home Decor,1052,2,2022-09-05
+CUST0362,51,Other,44041,1968.75,45,43.75,Vintage,Black,0,Sunday,Online,Often,1,Footwear,955,3,2023-12-21
+CUST0363,20,Male,30571,2658.26,86,30.91,Casual,Yellow,1,Friday,Online,Sometimes,46,Clothing,5307,9,2023-02-24
+CUST0364,28,Other,57059,1408.32,18,78.24,Formal,Blue,1,Monday,InStore,Sometimes,45,Accessories,3595,6,2024-12-11
+CUST0365,41,Other,69619,3960.11,37,107.03,Sporty,Green,1,Wednesday,InStore,Often,84,Clothing,1979,6,2021-01-06
+CUST0366,54,Other,37989,882.6,15,58.84,Vintage,Black,1,Sunday,InStore,Always,50,Footwear,8951,5,2023-09-04
+CUST0367,23,Female,36852,2858.25,75,38.11,Casual,White,0,Friday,Online,Sometimes,42,Beauty,168,2,2022-11-07
+CUST0368,34,Other,57472,558.7,10,55.87,Formal,Red,0,Monday,InStore,Often,88,Electronics,1711,2,2022-01-26
+CUST0369,34,Male,54261,4791.36,92,52.08,Formal,Yellow,0,Monday,Online,Often,5,Clothing,150,1,2021-06-10
+CUST0370,30,Other,58287,1007.38,19,53.02,Formal,Blue,1,Monday,Online,Sometimes,52,Electronics,5283,1,2021-04-29
+CUST0371,61,Male,33876,2382.9,78,30.55,Vintage,Yellow,0,Sunday,InStore,Sometimes,90,Clothing,732,9,2021-10-04
+CUST0372,22,Male,29874,1904.43,87,21.89,Casual,Black,1,Friday,Online,Often,4,Electronics,2661,9,2024-10-15
+CUST0373,28,Female,52812,5568.71,79,70.49,Formal,Yellow,0,Monday,Online,Often,83,Footwear,1960,1,2024-12-04
+CUST0374,42,Male,74632,2678.0,25,107.12,Bohemian,Red,1,Saturday,InStore,Always,40,Accessories,5733,4,2021-12-10
+CUST0375,65,Male,46795,1107.96,28,39.57,Vintage,Blue,0,Sunday,InStore,Rarely,15,Accessories,1374,10,2023-06-18
+CUST0376,25,Female,38011,701.1,19,36.9,Casual,Yellow,0,Friday,Online,Rarely,75,Electronics,1948,6,2021-12-11
+CUST0377,38,Male,81997,7591.59,93,81.63,Sporty,Red,1,Wednesday,InStore,Always,41,Electronics,7483,6,2020-07-31
+CUST0378,34,Male,92723,15241.8,84,181.45,Bohemian,Green,1,Saturday,InStore,Always,22,Clothing,5231,4,2021-10-31
+CUST0379,32,Male,49066,3273.76,56,58.46,Formal,Yellow,1,Monday,InStore,Sometimes,46,Footwear,8078,9,2024-05-23
+CUST0380,20,Female,39877,447.2,20,22.36,Casual,Blue,0,Friday,Online,Often,10,Home Decor,154,1,2023-06-03
+CUST0381,45,Other,71022,14252.28,84,169.67,Bohemian,White,0,Saturday,InStore,Sometimes,70,Beauty,966,3,2021-05-12
+CUST0382,42,Other,67317,10542.55,85,124.03,Sporty,Black,0,Wednesday,Online,Sometimes,51,Footwear,1028,1,2023-09-02
+CUST0383,35,Male,45434,5724.0,75,76.32,Formal,White,0,Monday,Online,Always,85,Accessories,1507,8,2024-08-19
+CUST0384,36,Male,67170,9464.4,72,131.45,Sporty,Red,1,Wednesday,Online,Never,27,Beauty,6018,7,2022-11-10
+CUST0385,65,Male,44897,811.5,15,54.1,Vintage,Yellow,1,Sunday,Online,Always,82,Footwear,4414,10,2023-02-20
+CUST0386,43,Other,75696,7435.6,58,128.2,Bohemian,White,1,Saturday,InStore,Always,10,Beauty,4221,7,2021-10-04
+CUST0387,34,Female,53298,3042.6,55,55.32,Formal,White,1,Monday,InStore,Never,18,Electronics,2813,4,2023-04-04
+CUST0388,22,Male,26930,1015.29,29,35.01,Casual,Blue,1,Friday,InStore,Often,85,Accessories,6893,6,2023-12-11
+CUST0389,25,Male,35689,2565.94,71,36.14,Casual,Green,0,Friday,InStore,Sometimes,32,Clothing,261,10,2022-07-23
+CUST0390,30,Other,74414,17914.5,90,199.05,Bohemian,Red,0,Saturday,Online,Rarely,24,Beauty,1962,7,2023-08-13
+CUST0391,43,Other,90893,1695.12,12,141.26,Bohemian,Yellow,1,Saturday,InStore,Rarely,78,Electronics,7991,3,2021-12-02
+CUST0392,32,Other,59688,1712.48,28,61.16,Formal,Blue,1,Monday,Online,Often,59,Beauty,9776,2,2023-06-29
+CUST0393,32,Male,52630,1905.54,26,73.29,Formal,Red,0,Monday,InStore,Always,88,Electronics,1692,3,2023-11-16
+CUST0394,28,Other,75813,9385.6,70,134.08,Bohemian,Green,0,Saturday,InStore,Sometimes,16,Clothing,987,3,2023-12-06
+CUST0395,42,Other,97116,1930.8,10,193.08,Bohemian,Yellow,1,Saturday,InStore,Sometimes,6,Home Decor,8780,7,2021-08-06
+CUST0396,33,Other,52492,4090.5,54,75.75,Formal,Yellow,0,Monday,Online,Rarely,30,Clothing,580,10,2025-03-14
+CUST0397,38,Male,78447,4858.6,34,142.9,Bohemian,Yellow,0,Saturday,InStore,Rarely,1,Electronics,1340,4,2023-11-08
+CUST0398,42,Male,71870,3048.88,23,132.56,Sporty,White,1,Wednesday,Online,Sometimes,73,Footwear,4614,7,2020-10-26
+CUST0399,32,Female,58091,5883.84,81,72.64,Formal,Blue,1,Monday,InStore,Sometimes,40,Beauty,5741,7,2021-05-09
+CUST0400,27,Other,47529,3557.03,67,53.09,Formal,Blue,0,Monday,Online,Sometimes,44,Beauty,1257,1,2023-07-07
+CUST0401,32,Male,40173,1618.68,21,77.08,Formal,White,1,Monday,Online,Rarely,48,Clothing,718,7,2022-02-12
+CUST0402,60,Other,47072,2077.36,46,45.16,Vintage,Green,0,Sunday,InStore,Often,82,Electronics,899,1,2020-06-01
+CUST0403,34,Male,49371,2542.86,34,74.79,Formal,Green,0,Monday,InStore,Often,47,Accessories,1341,1,2022-02-18
+CUST0404,27,Female,49041,3635.6,61,59.6,Formal,Yellow,1,Monday,Online,Rarely,2,Home Decor,1224,2,2024-11-10
+CUST0405,34,Other,93794,15353.55,81,189.55,Bohemian,Black,1,Saturday,InStore,Rarely,78,Accessories,7550,7,2023-08-02
+CUST0406,25,Female,78555,4445.44,32,138.92,Bohemian,Green,0,Saturday,InStore,Sometimes,44,Clothing,1644,9,2021-02-27
+CUST0407,50,Female,77626,6703.08,83,80.76,Sporty,Yellow,1,Wednesday,InStore,Sometimes,32,Footwear,7617,8,2024-01-07
+CUST0408,25,Female,85793,4572.96,24,190.54,Bohemian,Red,1,Saturday,InStore,Always,87,Home Decor,3867,6,2024-08-21
+CUST0409,56,Male,46924,2553.72,78,32.74,Vintage,Yellow,1,Sunday,Online,Never,87,Home Decor,5703,2,2022-04-20
+CUST0410,30,Female,85615,6596.5,50,131.93,Bohemian,Blue,1,Saturday,Online,Often,25,Electronics,3371,4,2021-09-09
+CUST0411,30,Male,46775,3061.5,39,78.5,Formal,Blue,1,Monday,Online,Never,11,Home Decor,8171,10,2023-06-16
+CUST0412,18,Other,35803,2223.57,57,39.01,Casual,Black,1,Friday,InStore,Often,74,Footwear,8141,3,2020-05-22
+CUST0413,33,Other,83037,5978.92,38,157.34,Bohemian,Blue,0,Saturday,InStore,Sometimes,70,Clothing,1029,6,2020-10-31
+CUST0414,64,Male,35727,3329.28,68,48.96,Vintage,Yellow,1,Sunday,Online,Never,87,Accessories,6316,10,2023-07-05
+CUST0415,23,Female,31848,2549.36,88,28.97,Casual,Blue,1,Friday,Online,Sometimes,79,Footwear,6095,3,2020-06-20
+CUST0416,57,Other,36898,2444.4,63,38.8,Vintage,Black,1,Sunday,InStore,Rarely,24,Beauty,2248,10,2022-11-21
+CUST0417,27,Other,48845,2394.4,40,59.86,Formal,White,1,Monday,Online,Often,20,Electronics,259,3,2022-05-05
+CUST0418,58,Other,34406,4516.2,90,50.18,Vintage,Green,1,Sunday,InStore,Rarely,72,Beauty,881,7,2020-05-05
+CUST0419,20,Female,21967,1296.85,37,35.05,Casual,White,0,Friday,Online,Sometimes,47,Footwear,1147,9,2021-04-23
+CUST0420,41,Male,60649,8395.42,62,135.41,Sporty,Black,0,Wednesday,InStore,Sometimes,69,Accessories,1598,5,2022-09-28
+CUST0421,41,Female,82059,10145.25,75,135.27,Sporty,Yellow,1,Wednesday,InStore,Sometimes,37,Electronics,2473,3,2020-11-27
+CUST0422,42,Other,80685,7601.44,88,86.38,Sporty,White,0,Wednesday,Online,Sometimes,41,Footwear,1337,5,2023-09-14
+CUST0423,45,Female,81123,6876.6,60,114.61,Sporty,White,1,Wednesday,InStore,Sometimes,58,Electronics,2841,3,2022-10-06
+CUST0424,20,Female,27688,1988.1,94,21.15,Casual,Yellow,0,Friday,Online,Sometimes,13,Clothing,1918,8,2020-07-23
+CUST0425,26,Other,70863,9297.0,60,154.95,Bohemian,Red,0,Saturday,Online,Rarely,84,Electronics,633,4,2022-07-07
+CUST0426,30,Male,54521,5692.5,90,63.25,Formal,Blue,0,Monday,Online,Sometimes,42,Electronics,956,9,2023-10-13
+CUST0427,44,Other,74576,3837.78,27,142.14,Sporty,Green,0,Wednesday,InStore,Sometimes,82,Beauty,890,9,2022-06-22
+CUST0428,34,Female,99783,7294.86,54,135.09,Bohemian,Green,0,Saturday,InStore,Sometimes,47,Electronics,532,3,2023-02-06
+CUST0429,36,Male,60003,6702.44,76,88.19,Sporty,Black,1,Wednesday,Online,Never,63,Electronics,5008,1,2023-07-29
+CUST0430,63,Male,39598,2948.94,86,34.29,Vintage,Red,1,Sunday,Online,Often,56,Electronics,4194,3,2022-02-21
+CUST0431,64,Female,42398,2008.3,38,52.85,Vintage,Red,1,Sunday,InStore,Sometimes,79,Home Decor,4554,5,2022-02-20
+CUST0432,33,Male,83530,5501.88,34,161.82,Bohemian,Blue,0,Saturday,Online,Sometimes,80,Electronics,557,10,2024-03-31
+CUST0433,54,Male,40506,396.36,12,33.03,Vintage,Red,0,Sunday,Online,Never,35,Accessories,1464,8,2020-09-12
+CUST0434,21,Male,22955,628.72,29,21.68,Casual,White,0,Friday,Online,Rarely,64,Footwear,949,1,2020-09-24
+CUST0435,37,Male,87641,3613.96,28,129.07,Sporty,Black,1,Wednesday,Online,Sometimes,25,Footwear,6351,1,2021-10-15
+CUST0436,21,Male,32609,1416.36,66,21.46,Casual,Yellow,0,Friday,Online,Often,13,Beauty,1363,4,2022-07-11
+CUST0437,57,Male,40227,2787.66,51,54.66,Vintage,Yellow,0,Sunday,InStore,Sometimes,16,Footwear,985,5,2024-02-21
+CUST0438,31,Male,41706,6763.05,95,71.19,Formal,Red,0,Monday,InStore,Rarely,22,Footwear,1197,2,2023-11-04
+CUST0439,63,Male,37965,356.84,11,32.44,Vintage,Green,1,Sunday,InStore,Rarely,12,Accessories,2683,8,2023-05-14
+CUST0440,23,Female,21967,368.9,17,21.7,Casual,Yellow,0,Friday,InStore,Often,17,Electronics,476,6,2024-03-12
+CUST0441,45,Female,94795,10727.64,54,198.66,Bohemian,Yellow,0,Saturday,Online,Sometimes,18,Footwear,1840,1,2020-11-22
+CUST0442,62,Female,44336,3339.63,81,41.23,Vintage,Green,1,Sunday,Online,Rarely,45,Footwear,7774,5,2021-12-13
+CUST0443,42,Other,75254,2467.08,18,137.06,Bohemian,Blue,1,Saturday,Online,Rarely,47,Electronics,111,9,2024-11-13
+CUST0444,62,Other,36079,652.56,12,54.38,Vintage,Black,0,Sunday,Online,Never,69,Electronics,388,9,2025-02-05
+CUST0445,63,Other,48070,1694.18,29,58.42,Vintage,Black,1,Sunday,Online,Rarely,13,Beauty,1192,1,2021-04-22
+CUST0446,28,Male,41024,2785.3,35,79.58,Formal,White,0,Monday,Online,Sometimes,50,Home Decor,1003,9,2022-01-20
+CUST0447,43,Female,78386,2805.44,16,175.34,Bohemian,Blue,0,Saturday,Online,Always,84,Electronics,1901,2,2024-11-27
+CUST0448,63,Other,31989,2312.24,56,41.29,Vintage,Yellow,1,Sunday,InStore,Often,8,Beauty,4455,9,2024-04-12
+CUST0449,19,Male,29958,411.73,19,21.67,Casual,Green,0,Friday,Online,Rarely,50,Accessories,395,9,2020-06-12
+CUST0450,35,Other,45862,5938.11,81,73.31,Formal,Green,1,Monday,InStore,Often,74,Footwear,7615,7,2022-04-06
+CUST0451,20,Female,25911,2493.6,80,31.17,Casual,Green,1,Friday,InStore,Sometimes,77,Electronics,5872,6,2024-04-06
+CUST0452,35,Female,97684,8117.94,57,142.42,Bohemian,Yellow,1,Saturday,InStore,Rarely,31,Beauty,9039,4,2020-09-20
+CUST0453,63,Female,48030,2401.98,42,57.19,Vintage,White,1,Sunday,InStore,Never,5,Footwear,9860,1,2023-06-05
+CUST0454,29,Male,99174,5333.76,48,111.12,Bohemian,Black,0,Saturday,Online,Rarely,89,Footwear,1882,9,2024-06-24
+CUST0455,42,Male,88699,12388.58,83,149.26,Bohemian,Red,0,Saturday,Online,Rarely,34,Footwear,1821,10,2025-01-28
+CUST0456,29,Male,48396,2416.32,48,50.34,Formal,Green,1,Monday,InStore,Rarely,10,Home Decor,5419,8,2020-11-11
+CUST0457,33,Other,58881,1409.32,22,64.06,Formal,Yellow,1,Monday,Online,Often,49,Clothing,1016,6,2024-02-23
+CUST0458,50,Female,86776,5456.1,65,83.94,Sporty,Red,0,Wednesday,InStore,Often,2,Home Decor,1592,7,2023-12-30
+CUST0459,22,Female,37182,335.7,15,22.38,Casual,Green,0,Friday,Online,Often,20,Clothing,1379,7,2023-03-17
+CUST0460,63,Other,49501,2782.99,83,33.53,Vintage,Red,0,Sunday,Online,Often,19,Accessories,688,2,2020-11-04
+CUST0461,60,Female,31615,3958.4,80,49.48,Vintage,Black,0,Sunday,Online,Sometimes,90,Accessories,1560,3,2024-12-22
+CUST0462,59,Female,36491,3771.36,72,52.38,Vintage,Yellow,0,Sunday,InStore,Always,68,Accessories,496,2,2023-06-14
+CUST0463,48,Other,74092,6162.84,51,120.84,Sporty,Green,0,Wednesday,Online,Sometimes,47,Footwear,390,6,2022-06-16
+CUST0464,45,Female,81476,1915.55,13,147.35,Sporty,Blue,1,Wednesday,InStore,Always,57,Beauty,2489,8,2023-09-18
+CUST0465,21,Female,26543,2667.5,97,27.5,Casual,Blue,0,Friday,Online,Never,80,Accessories,1779,5,2021-05-28
+CUST0466,23,Female,23646,1259.79,49,25.71,Casual,White,0,Friday,Online,Often,28,Accessories,1119,9,2022-08-13
+CUST0467,44,Other,75827,12531.2,89,140.8,Sporty,Blue,0,Wednesday,Online,Always,68,Clothing,523,3,2020-09-04
+CUST0468,22,Other,26576,2422.53,99,24.47,Casual,Black,0,Friday,Online,Always,9,Electronics,1352,5,2020-06-14
+CUST0469,49,Female,63535,1769.16,12,147.43,Sporty,Yellow,1,Wednesday,Online,Sometimes,13,Footwear,8040,10,2023-09-18
+CUST0470,27,Other,76108,3542.7,35,101.22,Bohemian,White,0,Saturday,Online,Always,40,Footwear,1003,7,2023-01-05
+CUST0471,26,Female,51363,7672.7,97,79.1,Formal,Black,1,Monday,Online,Always,65,Footwear,1115,5,2024-01-01
+CUST0472,65,Female,30965,2534.49,81,31.29,Vintage,Blue,0,Sunday,Online,Sometimes,18,Clothing,1494,7,2022-02-02
+CUST0473,44,Other,98596,17019.9,90,189.11,Bohemian,Blue,1,Saturday,Online,Rarely,40,Beauty,5495,8,2020-08-17
+CUST0474,29,Male,76775,14207.61,93,152.77,Bohemian,Green,0,Saturday,InStore,Rarely,68,Accessories,880,3,2024-11-26
+CUST0475,30,Other,80403,3587.4,18,199.3,Bohemian,Green,0,Saturday,Online,Often,19,Home Decor,60,6,2025-02-03
+CUST0476,57,Other,39940,2125.86,66,32.21,Vintage,Yellow,1,Sunday,Online,Rarely,17,Accessories,529,10,2023-08-24
+CUST0477,33,Other,89844,12741.98,82,155.39,Bohemian,Blue,0,Saturday,Online,Never,11,Home Decor,1597,8,2022-10-23
+CUST0478,34,Other,59815,5535.6,70,79.08,Formal,Yellow,1,Monday,Online,Sometimes,61,Accessories,2783,4,2023-08-26
+CUST0479,26,Female,53388,722.59,11,65.69,Formal,White,0,Monday,InStore,Always,27,Clothing,362,8,2024-06-24
+CUST0480,40,Female,92539,8309.94,51,162.94,Bohemian,Blue,1,Saturday,Online,Never,49,Home Decor,5226,7,2025-05-01
+CUST0481,43,Other,89457,13226.46,78,169.57,Bohemian,Yellow,0,Saturday,InStore,Sometimes,6,Accessories,1062,9,2022-12-17
+CUST0482,62,Female,31286,3534.84,81,43.64,Vintage,Green,0,Sunday,Online,Sometimes,39,Footwear,944,3,2025-01-22
+CUST0483,55,Other,31787,4785.34,98,48.83,Vintage,Blue,1,Sunday,InStore,Sometimes,65,Clothing,3045,10,2021-10-01
+CUST0484,29,Female,82880,9822.66,62,158.43,Bohemian,White,0,Saturday,Online,Sometimes,26,Electronics,184,5,2022-11-08
+CUST0485,47,Other,81252,4292.4,30,143.08,Sporty,Yellow,0,Wednesday,Online,Often,82,Footwear,174,9,2021-06-03
+CUST0486,62,Male,46766,2759.68,88,31.36,Vintage,White,1,Sunday,Online,Rarely,43,Beauty,2559,3,2022-11-22
+CUST0487,28,Female,41681,3681.09,63,58.43,Formal,Black,1,Monday,Online,Rarely,17,Accessories,157,10,2022-12-05
+CUST0488,36,Female,75028,10696.69,73,146.53,Sporty,Green,0,Wednesday,InStore,Sometimes,28,Beauty,1350,8,2021-04-08
+CUST0489,57,Other,44479,1134.2,20,56.71,Vintage,Green,0,Sunday,Online,Sometimes,80,Home Decor,1141,4,2022-08-07
+CUST0490,20,Other,24858,494.87,17,29.11,Casual,Black,0,Friday,Online,Never,74,Beauty,611,6,2020-09-13
+CUST0491,18,Male,23568,2041.2,63,32.4,Casual,Blue,1,Friday,InStore,Often,77,Beauty,9310,3,2022-09-22
+CUST0492,62,Male,48971,2145.92,56,38.32,Vintage,Red,1,Sunday,Online,Always,9,Electronics,9118,2,2020-08-31
+CUST0493,43,Other,64408,2329.25,25,93.17,Sporty,Black,1,Wednesday,InStore,Sometimes,90,Accessories,1053,2,2024-06-30
+CUST0494,45,Female,87332,3073.77,21,146.37,Bohemian,Yellow,1,Saturday,Online,Often,34,Beauty,9523,10,2022-08-13
+CUST0495,50,Other,64250,9216.24,88,104.73,Sporty,White,1,Wednesday,Online,Rarely,79,Accessories,4859,4,2021-03-16
+CUST0496,19,Other,20785,2185.23,69,31.67,Casual,Red,0,Friday,InStore,Always,53,Clothing,683,6,2021-07-19
+CUST0497,45,Other,76957,1185.47,11,107.77,Bohemian,Blue,1,Saturday,Online,Never,39,Beauty,9111,6,2021-06-03
+CUST0498,19,Female,30921,2092.97,53,39.49,Casual,Yellow,0,Friday,InStore,Rarely,44,Home Decor,981,8,2022-10-19
+CUST0499,20,Other,35777,1151.88,29,39.72,Casual,White,1,Friday,Online,Often,8,Beauty,5004,10,2024-09-28
